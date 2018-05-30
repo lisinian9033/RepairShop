@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project-module
+  type="WEB"
+  name="repairShop"
+  id="myeclipse.1527643261168"
+  context-root="/repairShop"
+  j2ee-spec="6.0"
+  archive="repairShop.war">
+  <attributes>
+    <attribute name="webrootdir" value="src/main/webapp" />
+  </attributes>
+</project-module>
+
