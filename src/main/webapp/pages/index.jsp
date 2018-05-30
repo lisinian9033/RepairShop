@@ -2,8 +2,9 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<meta charset="utf-8">
+<meta charset="utf-8">
 <title>汽车服务商店后台管理</title>
+<link rel="shortcut icon" href="favicon.ico" type="image/x-icon" />
 <link type="text/css" rel="stylesheet" href="${pageContext.request.contextPath }/fontsawesome/css/font-awesome.css"/>
 <link type="text/css" rel="stylesheet" href="${pageContext.request.contextPath }/css/style.css"/>
 </head>
