@@ -264,7 +264,7 @@
 						$("body",Wparent).append(tipBg);
 						$("body",Wparent).append(tipBox);
 						$(".tip_box",Wparent).prepend("<h2>选择服务项目<span class='tip_close'><i class='fa fa-close'></i></span></h2><div class='tip_tbox'></div>");
-						$(".tip_tbox",Wparent).append("<iframe src='choose_Serve.jsp' frameborder='0' width='100%' height='100%' seamless></iframe>");
+						$(".tip_tbox",Wparent).append("<iframe src='pages/choose_Serve.jsp' frameborder='0' width='100%' height='100%' seamless></iframe>");
 						DelTipWidth(700,500);
 						var titH = $(".tip_box",Wparent).find("h2").outerHeight();
 						$(".tip_tbox",Wparent).css("height",500 - titH);
