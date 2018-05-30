@@ -8,7 +8,7 @@ PUBLIC "-//mybatis.org//DTD Config 3.0//EN"
 	  <package name="com.jbit.entity"/>
 	</typeAliases>
 	<mappers>
-		<mapper resource="com/jbit/dao/AfficheMapper.xml" />
-		<mapper resource="com/jbit/dao/AuAuthorityMapper.xml" />
+		<!-- <mapper resource="com/jbit/dao/AfficheMapper.xml" />
+		<mapper resource="com/jbit/dao/AuAuthorityMapper.xml" /> -->
 	</mappers>
 </configuration>
