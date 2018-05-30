@@ -77,7 +77,11 @@
 	</bean>
 
 	<!--本地静态文件映射 -->
-	<mvc:resources location="/statics/" mapping="/statics/**" />
+	<mvc:resources location="/bosssystem/" mapping="/bosssystem/**" />
+	<mvc:resources location="/css/" mapping="/css/**" />
+	<mvc:resources location="/fontsawesome/" mapping="/fontsawesome/**" />
+	<mvc:resources location="/images/" mapping="/images/**" />
+	<mvc:resources location="/js/" mapping="/js/**" />
 	<mvc:resources location="/pages/" mapping="/pages/**" />
 
 	<!--配置试图解析器 -->
