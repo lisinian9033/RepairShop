@@ -4,8 +4,8 @@
 <head>
 	<meta charset="utf-8">
 		<title>会员详情</title>
-		<link type="text/css" rel="stylesheet" href="fontsawesome/css/font-awesome.css"/>
-		<link type="text/css" rel="stylesheet" href="css/style.css"/>
+		<link type="text/css" rel="stylesheet" href="${pageContext.request.contextPath }/fontsawesome/css/font-awesome.css"/>
+		<link type="text/css" rel="stylesheet" href="${pageContext.request.contextPath }/css/style.css"/>
 	</head>
 	<body>
 		<div class="main_box">
@@ -239,11 +239,11 @@
 			</div>
 		</div>
 		<!--javascript include-->
-		<script src="js/jquery-2.2.1.min.js"></script>
-		<script src="js/jquery.dataTables.min.js"></script>
-		<script src="js/bootstrap-datepicker.js"></script>
-		<script src="js/jquery.validate.min.js"></script>
-		<script src="js/other.js"></script>
+		<script src="${pageContext.request.contextPath }/js/jquery-2.2.1.min.js"></script>
+		<script src="${pageContext.request.contextPath }/js/jquery.dataTables.min.js"></script>
+		<script src="${pageContext.request.contextPath }/js/bootstrap-datepicker.js"></script>
+		<script src="${pageContext.request.contextPath }/js/jquery.validate.min.js"></script>
+		<script src="${pageContext.request.contextPath }/js/other.js"></script>
 		<script>
 			$(function(){
 				//=====弹出窗设置
@@ -262,13 +262,13 @@
 						Wparent = window.parent.document;
 					$.ajax({
 						type:"get",
-						url:"user_Package.html",
+						url:"${pageContext.request.contextPath }/pages/user_Package.jsp",
 						data:{"userId":userId,"bixId":boxId},
 						success:function(){
 							$("body",Wparent).append(tipBg);
 							$("body",Wparent).append(tipBox);
 							$(".tipbox_top",Wparent).prepend("<h2>礼包详情<span class='tiptop_close'><i class='fa fa-close'></i></span></h2><div class='tip_tbox tiptop_box'></div>");
-							$(".tiptop_box",Wparent).append("<iframe src='user_Package.html' frameborder='0' width='100%' height='100%' seamless></iframe>");
+							$(".tiptop_box",Wparent).append("<iframe src='${pageContext.request.contextPath }/pages/user_Package.jsp' frameborder='0' width='100%' height='100%' seamless></iframe>");
 							DelTipWidth(660,420);
 							var titH = $(".tipbox_top",Wparent).find("h2").outerHeight(),
 								Theight = $(".tipbox_top",Wparent).height();

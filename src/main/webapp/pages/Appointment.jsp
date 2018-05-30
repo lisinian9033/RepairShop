@@ -4,9 +4,9 @@
 <head>
 	<meta charset="utf-8">
 		<title>本店预约列表</title>
-		<link type="text/css" rel="stylesheet" href="fontsawesome/css/font-awesome.css"/>
-		<link type="text/css" rel="stylesheet" href="css/datepicker.css"/>
-		<link type="text/css" rel="stylesheet" href="css/style.css"/>
+		<link type="text/css" rel="stylesheet" href="${pageContext.request.contextPath }/fontsawesome/css/font-awesome.css"/>
+		<link type="text/css" rel="stylesheet" href="${pageContext.request.contextPath }/css/datepicker.css"/>
+		<link type="text/css" rel="stylesheet" href="${pageContext.request.contextPath }/css/style.css"/>
 	</head>
 	<body>
 		<div class="main_box">
@@ -74,22 +74,22 @@
 		</div>
 		</div>
 		<!--javascript include-->
-		<script src="js/jquery-2.2.1.min.js"></script>
-		<script src="js/jquery.dataTables.min.js"></script>
-		<script src="js/bootstrap-datepicker.js"></script>
-		<script src="js/jquery.validate.min.js"></script>
-		<script src="js/other.js"></script>
+		<script src="${pageContext.request.contextPath }/js/jquery-2.2.1.min.js"></script>
+		<script src="${pageContext.request.contextPath }/js/jquery.dataTables.min.js"></script>
+		<script src="${pageContext.request.contextPath }/js/bootstrap-datepicker.js"></script>
+		<script src="${pageContext.request.contextPath }/js/jquery.validate.min.js"></script>
+		<script src="${pageContext.request.contextPath }/js/other.js"></script>
 		<script>
 			$(function(){
 				$("body").other({tableId:"#table_box",tableWrap:[0,7,8],tableAas:[4,"desc"],tableSearch:true});
 				//实际应用请使用下面的tipWindow方法，这里直接删除
-				$("body").tipWindow({method:"edit",type:"form",Class:".edit_btn",even:"click",tipTit:"编辑预约详情",Twidth:"800",Theight:"600",editUrl:"appoint_Detail.html"});//editUrl 编辑请求地址
+				$("body").tipWindow({method:"edit",type:"form",Class:".edit_btn",even:"click",tipTit:"编辑预约详情",Twidth:"800",Theight:"600",editUrl:"${pageContext.request.contextPath }/pages/appoint_Detail.jsp"});//editUrl 编辑请求地址
 				/**
 				 实际应用中请使用这里
 				 $(".edit_btn").off("click");
 				 $(".edit_btn").on("click",function(){
 				 	var dataId = {"id":$(this).parents("tr").prop("id")};
-				 	$("body").tipWindow({method:"edit",type:"form",dataId:dataId,tipTit:"编辑预约详情",Twidth:"800",Theight:"600",editUrl:"appoint_Detail.html"});//editUrl 编辑请求地址
+				 	$("body").tipWindow({method:"edit",type:"form",dataId:dataId,tipTit:"编辑预约详情",Twidth:"800",Theight:"600",editUrl:"${pageContext.request.contextPath }/pages/appoint_Detail.jsp"});//editUrl 编辑请求地址
 				 });
 				 * */
 			});

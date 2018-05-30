@@ -4,9 +4,9 @@
 <head>
 	<meta charset="utf-8">
 		<title>售后列表</title>
-		<link type="text/css" rel="stylesheet" href="fontsawesome/css/font-awesome.css"/>
-		<link type="text/css" rel="stylesheet" href="css/datepicker.css"/>
-		<link type="text/css" rel="stylesheet" href="css/style.css"/>
+		<link type="text/css" rel="stylesheet" href="${pageContext.request.contextPath }/fontsawesome/css/font-awesome.css"/>
+		<link type="text/css" rel="stylesheet" href="${pageContext.request.contextPath }/css/datepicker.css"/>
+		<link type="text/css" rel="stylesheet" href="${pageContext.request.contextPath }/css/style.css"/>
 	</head>
 	<body>
 		<div class="main_box">
@@ -60,11 +60,11 @@
 		</div>
 		</div>
 		<!--javascript include-->
-		<script src="js/jquery-2.2.1.min.js"></script>
-		<script src="js/jquery.dataTables.min.js"></script>
-		<script src="js/bootstrap-datepicker.js"></script>
-		<script src="js/jquery.validate.min.js"></script>
-		<script src="js/other.js"></script>
+		<script src="${pageContext.request.contextPath }/js/jquery-2.2.1.min.js"></script>
+		<script src="${pageContext.request.contextPath }/js/jquery.dataTables.min.js"></script>
+		<script src="${pageContext.request.contextPath }/js/bootstrap-datepicker.js"></script>
+		<script src="${pageContext.request.contextPath }/js/jquery.validate.min.js"></script>
+		<script src="${pageContext.request.contextPath }/js/other.js"></script>
 		<script>
 			$(function(){
 				$("body").other({tableId:"#table_box",tableWrap:[0,1,6],tableAas:[3,"desc"],tableSearch:true});

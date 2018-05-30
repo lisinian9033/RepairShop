@@ -4,9 +4,9 @@
 <head>
 	<meta charset="utf-8">
 		<title>消耗品管理</title>
-		<link type="text/css" rel="stylesheet" href="fontsawesome/css/font-awesome.css"/>
-		<link type="text/css" rel="stylesheet" href="css/datepicker.css"/>
-		<link type="text/css" rel="stylesheet" href="css/style.css"/>
+		<link type="text/css" rel="stylesheet" href="${pageContext.request.contextPath }/fontsawesome/css/font-awesome.css"/>
+		<link type="text/css" rel="stylesheet" href="${pageContext.request.contextPath }/css/datepicker.css"/>
+		<link type="text/css" rel="stylesheet" href="${pageContext.request.contextPath }/css/style.css"/>
 	</head>
 	<body>
 		<div class="main_box">
@@ -57,17 +57,17 @@
 		</div>
 		</div>
 		<!--javascript include-->
-		<script src="js/jquery-2.2.1.min.js"></script>
-		<script src="js/jquery.dataTables.min.js"></script>
-		<script src="js/bootstrap-datepicker.js"></script>
-		<script src="js/jquery.validate.min.js"></script>
-		<script src="js/other.js"></script>
+		<script src="${pageContext.request.contextPath }/js/jquery-2.2.1.min.js"></script>
+		<script src="${pageContext.request.contextPath }/js/jquery.dataTables.min.js"></script>
+		<script src="${pageContext.request.contextPath }/js/bootstrap-datepicker.js"></script>
+		<script src="${pageContext.request.contextPath }/js/jquery.validate.min.js"></script>
+		<script src="${pageContext.request.contextPath }/js/other.js"></script>
 		<script>
 			$(function(){
 				$("body").other({tableId:"#table_box",tableAas:[ 0,"desc"]});
-				$("body").tipWindow({method:"edit",type:"form",Class:".sign_in",even:"click",tipTit:"消耗品入库",Twidth:"400",Theight:"200",editUrl:"sign_In.html"});//editUrl 消耗品入库请求地址
-				$("body").tipWindow({method:"edit",type:"form",Class:".sign_out",even:"click",tipTit:"消耗品出库",Twidth:"400",Theight:"200",editUrl:"sign_Out.html"});//editUrl 消耗品出库请求地址
-				$("body").tipWindow({method:"edit",type:"form",Class:".add_expen",even:"click",tipTit:"添加消耗品",Twidth:"400",Theight:"220",editUrl:"add_Expenses.html"});//editUrl 添加消耗品请求地址
+				$("body").tipWindow({method:"edit",type:"form",Class:".sign_in",even:"click",tipTit:"消耗品入库",Twidth:"400",Theight:"200",editUrl:"${pageContext.request.contextPath }/pages/sign_In.jsp"});//editUrl 消耗品入库请求地址
+				$("body").tipWindow({method:"edit",type:"form",Class:".sign_out",even:"click",tipTit:"消耗品出库",Twidth:"400",Theight:"200",editUrl:"${pageContext.request.contextPath }/pages/sign_Out.jsp"});//editUrl 消耗品出库请求地址
+				$("body").tipWindow({method:"edit",type:"form",Class:".add_expen",even:"click",tipTit:"添加消耗品",Twidth:"400",Theight:"220",editUrl:"${pageContext.request.contextPath }/pages/add_Expenses.jsp"});//editUrl 添加消耗品请求地址
 			});
 		</script>
 	</body>

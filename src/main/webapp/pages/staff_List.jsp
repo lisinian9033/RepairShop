@@ -4,8 +4,8 @@
 <head>
 	<meta charset="utf-8">
 		<title>员工列表</title>
-		<link type="text/css" rel="stylesheet" href="fontsawesome/css/font-awesome.css"/>
-		<link type="text/css" rel="stylesheet" href="css/style.css"/>
+		<link type="text/css" rel="stylesheet" href="${pageContext.request.contextPath }/fontsawesome/css/font-awesome.css"/>
+		<link type="text/css" rel="stylesheet" href="${pageContext.request.contextPath }/css/style.css"/>
 	</head>
 	<body>
 		<div class="main_box">
@@ -75,17 +75,17 @@
 		</div>
 		</div>
 		<!--javascript include-->
-		<script src="js/jquery-2.2.1.min.js"></script>
-		<script src="js/jquery.dataTables.min.js"></script>
-		<script src="js/bootstrap-datepicker.js"></script>
-		<script src="js/jquery.validate.min.js"></script>
-		<script src="js/bootstrap-datepicker.js"></script>
-		<script src="js/other.js"></script>
+		<script src="${pageContext.request.contextPath }/js/jquery-2.2.1.min.js"></script>
+		<script src="${pageContext.request.contextPath }/js/jquery.dataTables.min.js"></script>
+		<script src="${pageContext.request.contextPath }/js/bootstrap-datepicker.js"></script>
+		<script src="${pageContext.request.contextPath }/js/jquery.validate.min.js"></script>
+		<script src="${pageContext.request.contextPath }/js/bootstrap-datepicker.js"></script>
+		<script src="${pageContext.request.contextPath }/js/other.js"></script>
 		<script>
 			$(function(){
 				$("body").other({tableId:"#table_box",tableWrap:[1,7],tableAas:[ 0,"desc"],tableSearch:true});
-				$("body").tipWindow({method:"edit",type:"form",Class:".edit_btn",even:"click",tipTit:"编辑员工信息",Twidth:"700",Theight:"460",editUrl:"edit_Staff.html"});//editUrl 编辑员工信息请求地址
-				$("body").tipWindow({method:"edit",type:"form",Class:".see_btn",even:"click",tipTit:"员工业绩",Twidth:"998",Theight:"600",editUrl:"staff_Achievement.html"});//editUrl 员工业绩请求地址
+				$("body").tipWindow({method:"edit",type:"form",Class:".edit_btn",even:"click",tipTit:"编辑员工信息",Twidth:"700",Theight:"460",editUrl:"${pageContext.request.contextPath }/pages/edit_Staff.jsp"});//editUrl 编辑员工信息请求地址
+				$("body").tipWindow({method:"edit",type:"form",Class:".see_btn",even:"click",tipTit:"员工业绩",Twidth:"998",Theight:"600",editUrl:"${pageContext.request.contextPath }/pages/staff_Achievement.jsp"});//editUrl 员工业绩请求地址
 				//员工筛选
 				$(".search_formbox .btn").click(function(){
 					var dataId = $(this).prop("id"),//员工状态id

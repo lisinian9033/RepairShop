@@ -4,9 +4,9 @@
 <head>
 	<meta charset="utf-8">
 		<title>销售报表</title>
-		<link type="text/css" rel="stylesheet" href="fontsawesome/css/font-awesome.css"/>
-		<link type="text/css" rel="stylesheet" href="css/datepicker.css"/>
-		<link type="text/css" rel="stylesheet" href="css/style.css"/>
+		<link type="text/css" rel="stylesheet" href="${pageContext.request.contextPath }/fontsawesome/css/font-awesome.css"/>
+		<link type="text/css" rel="stylesheet" href="${pageContext.request.contextPath }/css/datepicker.css"/>
+		<link type="text/css" rel="stylesheet" href="${pageContext.request.contextPath }/css/style.css"/>
 	</head>
 	<body>
 		<div class="main_box">
@@ -122,11 +122,11 @@
 			</div>
 		</div>
 		<!--javascript include-->
-		<script src="js/jquery-2.2.1.min.js"></script>
-		<script src="js/jquery.dataTables.min.js"></script>
-		<script src="js/bootstrap-datepicker.js"></script>
-		<script src="js/jquery.validate.min.js"></script>
-		<script src="js/other.js"></script>
+		<script src="${pageContext.request.contextPath }/js/jquery-2.2.1.min.js"></script>
+		<script src="${pageContext.request.contextPath }/js/jquery.dataTables.min.js"></script>
+		<script src="${pageContext.request.contextPath }/js/bootstrap-datepicker.js"></script>
+		<script src="${pageContext.request.contextPath }/js/jquery.validate.min.js"></script>
+		<script src="${pageContext.request.contextPath }/js/other.js"></script>
 		<script>
 			$(function(){
 				//=====弹出窗设置
@@ -157,7 +157,7 @@
 					var index = $(this.parentNode).prevAll().length,
 						pTxt = $(this).parents("table").prev().text(),
 						headTxt = pTxt+" - "+$(this).parents("tbody").prev().find("th").eq(index).text(),
-						linkHref = "report_Nocard.html";
+						linkHref = "${pageContext.request.contextPath }/pages/report_Nocard.jsp";
 					tipW(headTxt,linkHref);
 				});
 				//卡类型
@@ -165,13 +165,13 @@
 					var index = $(this.parentNode).prevAll().length,
 						pTxt = $(this).parents("table").prev().text(),
 						headTxt = pTxt+" - "+$(this).parents("tbody").prev().find("th").eq(index).text(),
-						linkHref = "report_Card.html";
+						linkHref = "${pageContext.request.contextPath }/pages/report_Card.jsp";
 					tipW(headTxt,linkHref);
 				});
 				//商品销售报表
 				$(".see_goods").click(function(){
 					var headTxt = "商品销售报表",
-						linkHref = "report_GoodsSale.html";
+						linkHref = "${pageContext.request.contextPath }/pages/report_GoodsSale.jsp";
 					tipW(headTxt,linkHref);
 				});
 			});

@@ -3,7 +3,7 @@
 <html>
 <head>
 	<meta charset="utf-8">
-<title>邻家后台管理</title>
+<title>汽车服务商店后台管理</title>
 <link type="text/css" rel="stylesheet" href="${pageContext.request.contextPath }/fontsawesome/css/font-awesome.css"/>
 <link type="text/css" rel="stylesheet" href="${pageContext.request.contextPath }/css/style.css"/>
 </head>
@@ -193,7 +193,7 @@
 	});
 	jQuery("body").jrdek({Mtop:".header",Mleft:".main_left",Mright:".main_right",foldCell:".main_left h2"});
 	$(".logo").click(function(){
-		$("iframe[name='cont_box']").prop("src","/pages/Hello.jsp");
+		$("iframe[name='cont_box']").prop("src","${pageContext.request.contextPath }/pages/Hello.jsp");
 	});
 </script>
 </body>

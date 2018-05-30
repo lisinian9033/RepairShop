@@ -4,8 +4,8 @@
 <head>
 	<meta charset="utf-8">
 		<title>开单</title>
-		<link type="text/css" rel="stylesheet" href="fontsawesome/css/font-awesome.css"/>
-		<link type="text/css" rel="stylesheet" href="css/style.css"/>
+		<link type="text/css" rel="stylesheet" href="${pageContext.request.contextPath }/fontsawesome/css/font-awesome.css"/>
+		<link type="text/css" rel="stylesheet" href="${pageContext.request.contextPath }/css/style.css"/>
 	</head>
 	<body>
 		<div class="main_box new_order">
@@ -203,11 +203,11 @@
 			</div>
 		</div>
 		<!--javascript include-->
-		<script src="js/jquery-2.2.1.min.js"></script>
-		<script src="js/jquery.dataTables.min.js"></script>
-		<script src="js/bootstrap-datepicker.js"></script>
-		<script src="js/jquery.validate.min.js"></script>
-		<script src="js/other.js"></script>
+		<script src="${pageContext.request.contextPath }/js/jquery-2.2.1.min.js"></script>
+		<script src="${pageContext.request.contextPath }/js/jquery.dataTables.min.js"></script>
+		<script src="${pageContext.request.contextPath }/js/bootstrap-datepicker.js"></script>
+		<script src="${pageContext.request.contextPath }/js/jquery.validate.min.js"></script>
+		<script src="${pageContext.request.contextPath }/js/other.js"></script>
 		<script>
 			$(function(){
 				//=====弹出窗设置
@@ -250,7 +250,7 @@
 					$("body",Wparent).append(tipBg);
 					$("body",Wparent).append(tipBox);
 					$(".tip_box",Wparent).prepend("<h2>编辑爱车<span class='tip_close'><i class='fa fa-close'></i></span></h2><div class='tip_tbox'></div>");
-					$(".tip_tbox",Wparent).append("<iframe src='order_addCar.html?userId="+userId+"&carId="+carId+"&index="+num+"' frameborder='0' width='100%' height='100%' seamless></iframe>");
+					$(".tip_tbox",Wparent).append("<iframe src='${pageContext.request.contextPath }/pages/order_addCar.jsp?userId="+userId+"&carId="+carId+"&index="+num+"' frameborder='0' width='100%' height='100%' seamless></iframe>");
 					DelTipWidth(700,520);
 					var titH = $(".tip_box",Wparent).find("h2").outerHeight();
 					$(".tip_tbox",Wparent).css("height",520 - titH);
@@ -264,7 +264,7 @@
 						$("body",Wparent).append(tipBg);
 						$("body",Wparent).append(tipBox);
 						$(".tip_box",Wparent).prepend("<h2>选择服务项目<span class='tip_close'><i class='fa fa-close'></i></span></h2><div class='tip_tbox'></div>");
-						$(".tip_tbox",Wparent).append("<iframe src='choose_Serve.html' frameborder='0' width='100%' height='100%' seamless></iframe>");
+						$(".tip_tbox",Wparent).append("<iframe src='choose_Serve.jsp' frameborder='0' width='100%' height='100%' seamless></iframe>");
 						DelTipWidth(700,500);
 						var titH = $(".tip_box",Wparent).find("h2").outerHeight();
 						$(".tip_tbox",Wparent).css("height",500 - titH);
@@ -275,7 +275,7 @@
 					$("body",Wparent).append(tipBg);
 					$("body",Wparent).append(tipBox);
 					$(".tip_box",Wparent).prepend("<h2>选择商品<span class='tip_close'><i class='fa fa-close'></i></span></h2><div class='tip_tbox'></div>");
-					$(".tip_tbox",Wparent).append("<iframe src='choose_Goods.html' frameborder='0' width='100%' height='100%' seamless></iframe>");
+					$(".tip_tbox",Wparent).append("<iframe src='${pageContext.request.contextPath }/pages/choose_Goods.jsp' frameborder='0' width='100%' height='100%' seamless></iframe>");
 					DelTipWidth(700,400);
 					var titH = $(".tip_box",Wparent).find("h2").outerHeight();
 					$(".tip_tbox",Wparent).css("height",400 - titH);

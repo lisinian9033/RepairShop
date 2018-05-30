@@ -4,9 +4,9 @@
 <head>
 	<meta charset="utf-8">
 		<title>订单列表</title>
-		<link type="text/css" rel="stylesheet" href="fontsawesome/css/font-awesome.css"/>
-		<link type="text/css" rel="stylesheet" href="css/datepicker.css"/>
-		<link type="text/css" rel="stylesheet" href="css/style.css"/>
+		<link type="text/css" rel="stylesheet" href="${pageContext.request.contextPath }/fontsawesome/css/font-awesome.css"/>
+		<link type="text/css" rel="stylesheet" href="${pageContext.request.contextPath }/css/datepicker.css"/>
+		<link type="text/css" rel="stylesheet" href="${pageContext.request.contextPath }/css/style.css"/>
 	</head>
 	<body>
 		<div class="main_box">
@@ -98,30 +98,30 @@
 		</div>
 		</div>
 		<!--javascript include-->
-		<script src="js/jquery-2.2.1.min.js"></script>
-		<script src="js/jquery.dataTables.min.js"></script>
-		<script src="js/bootstrap-datepicker.js"></script>
-		<script src="js/jquery.validate.min.js"></script>
-		<script src="js/other.js"></script>
+		<script src="${pageContext.request.contextPath }/js/jquery-2.2.1.min.js"></script>
+		<script src="${pageContext.request.contextPath }/js/jquery.dataTables.min.js"></script>
+		<script src="${pageContext.request.contextPath }/js/bootstrap-datepicker.js"></script>
+		<script src="${pageContext.request.contextPath }/js/jquery.validate.min.js"></script>
+		<script src="${pageContext.request.contextPath }/js/other.js"></script>
 		<script>
 			$(function(){
 				$("body").other({tableId:"#table_box",tableWrap:[0,1,2,3,4,7,8],tableAas:[6,"desc"]});
 				$("body").tipWindow({method:"delete",Class:".del_btn",even:"click",deleteTxt:"确认要退单吗？",Twidth:"400",Theight:"180",delUrl:"#"});//delUrl 退单请求地址
-				$("body").tipWindow({method:"edit",type:"form",Class:".detail_btn",even:"click",tipTit:"订单详情",Twidth:"800",Theight:"600",editUrl:"order_Detail.html"});//editUrl 编辑请求地址
-				$("body").tipWindow({method:"edit",type:"form",Class:".edit_btn",even:"click",tipTit:"编辑订单",Twidth:"800",Theight:"600",editUrl:"order_edit.html"});//editUrl 编辑请求地址
+				$("body").tipWindow({method:"edit",type:"form",Class:".detail_btn",even:"click",tipTit:"订单详情",Twidth:"800",Theight:"600",editUrl:"${pageContext.request.contextPath }/pages/order_Detail.jsp"});//editUrl 编辑请求地址
+				$("body").tipWindow({method:"edit",type:"form",Class:".edit_btn",even:"click",tipTit:"编辑订单",Twidth:"800",Theight:"600",editUrl:"${pageContext.request.contextPath }/pages/order_edit.jsp"});//editUrl 编辑请求地址
 				//订单搜索
 				$(".search").click(function(){
 					var data = {"startDate":$("#order_shform").find("input[name='start']").val(),"endDate":$("#order_shform").find("input[name='end']").val(),"orderId":$("#order_shform").find("input[name='order_code']").val()};
 					$.ajax({
 						type:"post",
-						url:"search_Order.html",
+						url:"${pageContext.request.contextPath }/pages/search_Order.html",
 						data:data,
 						success:function(data){
 							$(".table").remove();
 							$(".cont_box").append(data);
 							$("body").other({tableId:"#table_box",tableWrap:[0,1,2,3,4,7,8],tableAas:[6,"desc"]});
 							$("body").tipWindow({method:"delete",Class:".del_btn",even:"click",deleteTxt:"确认要退单吗？",Twidth:"400",Theight:"180",delUrl:"#"});//delUrl 退单请求地址
-							$("body").tipWindow({method:"edit",type:"form",Class:".edit_btn",even:"click",tipTit:"订单详情",Twidth:"800",Theight:"600",editUrl:"order_Detail.html"});//editUrl 编辑请求地址
+							$("body").tipWindow({method:"edit",type:"form",Class:".edit_btn",even:"click",tipTit:"订单详情",Twidth:"800",Theight:"600",editUrl:"${pageContext.request.contextPath }/pages/order_Detail.jsp"});//editUrl 编辑请求地址
 						},
 						error:function(data){
 							alert(data);

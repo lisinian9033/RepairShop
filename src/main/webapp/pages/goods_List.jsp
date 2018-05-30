@@ -4,8 +4,8 @@
 <head>
 	<meta charset="utf-8">
 		<title>商品列表</title>
-		<link type="text/css" rel="stylesheet" href="fontsawesome/css/font-awesome.css"/>
-		<link type="text/css" rel="stylesheet" href="css/style.css"/>
+		<link type="text/css" rel="stylesheet" href="${pageContext.request.contextPath }/fontsawesome/css/font-awesome.css"/>
+		<link type="text/css" rel="stylesheet" href="${pageContext.request.contextPath }/css/style.css"/>
 	</head>
 	<body>
 		<div class="main_box">
@@ -75,16 +75,16 @@
 		</div>
 		</div>
 		<!--javascript include-->
-		<script src="js/jquery-2.2.1.min.js"></script>
-		<script src="js/jquery.dataTables.min.js"></script>
-		<script src="js/bootstrap-datepicker.js"></script>
-		<script src="js/jquery.validate.min.js"></script>
-		<script src="js/other.js"></script>
+		<script src="${pageContext.request.contextPath }/js/jquery-2.2.1.min.js"></script>
+		<script src="${pageContext.request.contextPath }/js/jquery.dataTables.min.js"></script>
+		<script src="${pageContext.request.contextPath }/js/bootstrap-datepicker.js"></script>
+		<script src="${pageContext.request.contextPath }/js/jquery.validate.min.js"></script>
+		<script src="${pageContext.request.contextPath }/js/other.js"></script>
 		<script>
 			$(function(){
 				$("body").other({tableId:"#table_box",tableWrap:[0,1,6],tableAas:[ 5,"desc"],tableSearch:true});
 				$("body").tipWindow({method:"delete",Class:".del_btn",even:"click",Twidth:"400",Theight:"180",delUrl:"#"});//delUrl 删除请求地址
-				$("body").tipWindow({method:"edit",type:"form",Class:".edit_btn",even:"click",tipTit:"商品编辑",Twidth:"700",Theight:"600",editUrl:"edit_Goods.html"});//editUrl 编辑请求地址
+				$("body").tipWindow({method:"edit",type:"form",Class:".edit_btn",even:"click",tipTit:"商品编辑",Twidth:"700",Theight:"600",editUrl:"${pageContext.request.contextPath }/pages/edit_Goods.jsp"});//editUrl 编辑请求地址
 				$("body").tipWindow({method:"Shelf",Twidth:"400",Theight:"180",shelfUrl:"#"});//shelfUrl 上下架请求地址
 			});
 		</script>

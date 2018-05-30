@@ -4,8 +4,8 @@
 <head>
 	<meta charset="utf-8">
 		<title>会员信息</title>
-		<link type="text/css" rel="stylesheet" href="fontsawesome/css/font-awesome.css"/>
-		<link type="text/css" rel="stylesheet" href="css/style.css"/>
+		<link type="text/css" rel="stylesheet" href="${pageContext.request.contextPath }/fontsawesome/css/font-awesome.css"/>
+		<link type="text/css" rel="stylesheet" href="${pageContext.request.contextPath }/css/style.css"/>
 	</head>
 	<body>
 		<div class="main_box">
@@ -342,11 +342,11 @@
 			</div>
 		</div>
 		<!--javascript include-->
-		<script src="js/jquery-2.2.1.min.js"></script>
-		<script src="js/jquery.dataTables.min.js"></script>
-		<script src="js/bootstrap-datepicker.js"></script>
-		<script src="js/jquery.validate.min.js"></script>
-		<script src="js/other.js"></script>
+		<script src="${pageContext.request.contextPath }/js/jquery-2.2.1.min.js"></script>
+		<script src="${pageContext.request.contextPath }/js/jquery.dataTables.min.js"></script>
+		<script src="${pageContext.request.contextPath }/js/bootstrap-datepicker.js"></script>
+		<script src="${pageContext.request.contextPath }/js/jquery.validate.min.js"></script>
+		<script src="${pageContext.request.contextPath }/js/other.js"></script>
 		<script>
 			$(function(){
 				$.jqtab(".tab_tit",".tab_conbox","click");
@@ -358,15 +358,15 @@
 					addPcard = "",//添加爱车时所需id
 					delPcard = "";//添加爱车时所需id
 				$("body").other({formId:"#edit_user",formUrl:"#"});//formUrl 表单请求地址,linkHref 请求成功后跳转地址，此页面不需要，已删除
-				$("body").tipWindow({method:"edit",type:"form",Class:".add_car",even:"click",dataId:addCar,tipTit:"添加爱车",Twidth:"700",Theight:"520",editUrl:"add_Car.html"});//editUrl 添加爱车请求地址
-				$("body").tipWindow({method:"edit",type:"form",Class:".edit_car",even:"click",dataId:editCar,tipTit:"编辑爱车",Twidth:"700",Theight:"520",editUrl:"edit_Car.html"});//editUrl 编辑爱车请求地址
+				$("body").tipWindow({method:"edit",type:"form",Class:".add_car",even:"click",dataId:addCar,tipTit:"添加爱车",Twidth:"700",Theight:"520",editUrl:"${pageContext.request.contextPath }/pages/add_Car.jsp"});//editUrl 添加爱车请求地址
+				$("body").tipWindow({method:"edit",type:"form",Class:".edit_car",even:"click",dataId:editCar,tipTit:"编辑爱车",Twidth:"700",Theight:"520",editUrl:"${pageContext.request.contextPath }/pages/edit_Car.jsp"});//editUrl 编辑爱车请求地址
 				$("body").tipWindow({method:"delete",Class:".del_car",even:"click",dataId:delCar,Twidth:"400",Theight:"180",delUrl:"#"});//delUrl 删除爱车请求地址
-				$("body").tipWindow({method:"edit",type:"form",Class:".add_ycard",even:"click",dataId:addYcard,tipTit:"添加年卡",Twidth:"600",Theight:"400",editUrl:"add_Ycard.html"});//editUrl 添加年卡请求地址
-				$("body").tipWindow({method:"edit",type:"form",Class:".add_spree",even:"click",dataId:addSpree,tipTit:"添加大礼包",Twidth:"600",Theight:"520",editUrl:"add_Spree.html"});//editUrl 添加大礼包请求地址
-				$("body").tipWindow({method:"edit",type:"form",Class:".add_pcard",even:"click",dataId:addPcard,tipTit:"添加储值卡",Twidth:"600",Theight:"400",editUrl:"add_Pcard.html"});//editUrl 添加储值卡请求地址
+				$("body").tipWindow({method:"edit",type:"form",Class:".add_ycard",even:"click",dataId:addYcard,tipTit:"添加年卡",Twidth:"600",Theight:"400",editUrl:"${pageContext.request.contextPath }/pages/add_Ycard.jsp"});//editUrl 添加年卡请求地址
+				$("body").tipWindow({method:"edit",type:"form",Class:".add_spree",even:"click",dataId:addSpree,tipTit:"添加大礼包",Twidth:"600",Theight:"520",editUrl:"${pageContext.request.contextPath }/pages/add_Spree.jsp"});//editUrl 添加大礼包请求地址
+				$("body").tipWindow({method:"edit",type:"form",Class:".add_pcard",even:"click",dataId:addPcard,tipTit:"添加储值卡",Twidth:"600",Theight:"400",editUrl:"${pageContext.request.contextPath }pages/add_Pcard.jsp"});//editUrl 添加储值卡请求地址
 				$("body").tipWindow({method:"delete",Class:".del_btn",even:"click",Twidth:"400",dataId:delPcard,Theight:"180",delUrl:"#"});//delUrl 删除储值卡请求地址
-				$("body").tipWindow({method:"edit",type:"form",Class:".upgrade_btn",even:"click",tipTit:"储值卡升级",Twidth:"600",Theight:"360",editUrl:"pcard_Upgrade.html"});//editUrl 储值卡升级请求地址
-				$("body").tipWindow({method:"edit",type:"form",Class:".recharge_btn",even:"click",tipTit:"储值卡充值",Twidth:"600",Theight:"300",editUrl:"pcard_Recharge.html"});//editUrl 储值卡充值请求地址
+				$("body").tipWindow({method:"edit",type:"form",Class:".upgrade_btn",even:"click",tipTit:"储值卡升级",Twidth:"600",Theight:"360",editUrl:"${pageContext.request.contextPath }/pages/pcard_Upgrade.jsp"});//editUrl 储值卡升级请求地址
+				$("body").tipWindow({method:"edit",type:"form",Class:".recharge_btn",even:"click",tipTit:"储值卡充值",Twidth:"600",Theight:"300",editUrl:"${pageContext.request.contextPath }/pages/pcard_Recharge.jsp"});//editUrl 储值卡充值请求地址
 				//查询会员获取信息
 				var userId = "";//会员id
 				$(".search").click(function(){
