@@ -8,7 +8,7 @@
     <result column="staff_career" jdbcType="VARCHAR" property="staffCareer" />
     <result column="staff_phone" jdbcType="VARCHAR" property="staffPhone" />
     <result column="staff_entrytime" jdbcType="DATE" property="staffEntrytime" />
-    <result column="staff_status" jdbcType="INTEGER" property="staffStatus" />
+    <result column="staff_status" jdbcType="VARCHAR" property="staffStatus" />
   </resultMap>
   <sql id="Base_Column_List">
     staff_no, staff_name, staff_sex, staff_career, staff_phone, staff_entrytime, staff_status
@@ -23,6 +23,16 @@
   <!--显示员工列表  -->
   <select id="getStaffList" resultMap="BaseResultMap">
   select * from staff_list order by staff_no asc
+  </select>
+  
+  <!--查询所有员工状态  -->
+  <select id="findStatus" resultMap="BaseResultMap">
+  select DISTINCT `staff_status` FROM `staff_list`
+  </select>
+  
+  <!-- 查询所有员工岗位 -->
+  <select id="findCareer" resultMap="BaseResultMap">
+  select DISTINCT `staff_career` FROM `staff_list`
   </select>
   
   <!--添加员工信息  -->

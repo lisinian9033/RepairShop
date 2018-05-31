@@ -31,6 +31,17 @@ public class StaffListController {
 	}
 	
 	/**
+	 * 跳转到添加员工页面
+	 */
+	@RequestMapping(value = "toAddStaff")
+	public String toAddStaff(HttpSession session){
+		List<StaffList> status=staffListService.findStatus();
+		List<StaffList> career=staffListService.findCareer();
+		session.setAttribute("status", status);//状态
+		session.setAttribute("career", career);//岗位
+		return "pages/add_Staff";
+	}
+	/**
 	 *添加员工
 	 */
 	@RequestMapping(value = "addStaff")
@@ -38,7 +49,7 @@ public class StaffListController {
 		int res=staffListService.addStaff(staffList);
 		if(res>0){
 			//添加成功
-			return "redirect:/list";
+			return "redirect:/staffList";
 		}
 		return "pages/add_Staff.jsp";
 	}

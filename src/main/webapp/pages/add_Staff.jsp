@@ -1,4 +1,5 @@
 <%@ page language="java" import="java.util.*" pageEncoding="UTF-8"%>
+<%@taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <!DOCTYPE html>
 <html>
 <head>
@@ -36,16 +37,17 @@
 							<label>岗位：</label>
 							<select name="staffCareer" required data-msg-required="所属岗位不能为空">
 								<option value="">请选择所属岗位</option>
-								<option value="店长">店长</option>
-								<option value="财务">财务</option>
-								<option value="洗车工">洗车工</option>
+								<c:forEach items="${career}" var="c">
+								<option value="${c.staffCareer }">${c.staffCareer }</option>
+								</c:forEach>
 							</select>
 						</li>
 						<li>
 							<label>是否在岗：</label>
 							<select name="staffStatus">
-								<option value="1">在岗</option>
-								<option value="2">离职</option>
+								<c:forEach items="${status}" var="s">
+								<option value="${s.staffStatus }">${s.staffStatus }</option>
+								</c:forEach>
 							</select>
 						</li>
 					</ul>

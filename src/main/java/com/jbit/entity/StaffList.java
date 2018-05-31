@@ -15,7 +15,7 @@ public class StaffList {
 
     private Date staffEntrytime;
 
-    private Integer staffStatus;
+    private String staffStatus;
 
     
     @Override
@@ -74,11 +74,11 @@ public class StaffList {
         this.staffEntrytime = staffEntrytime;
     }
 
-    public Integer getStaffStatus() {
+    public String getStaffStatus() {
         return staffStatus;
     }
 
-    public void setStaffStatus(Integer staffStatus) {
+    public void setStaffStatus(String staffStatus) {
         this.staffStatus = staffStatus;
     }
 }

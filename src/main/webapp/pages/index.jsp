@@ -115,7 +115,7 @@
 		</li>
 		<li>
 			<i class="menu_icon fa fa-plus-square"></i>
-			<a href="javascript:void(0);" data-id="staff" data-href="${pageContext.request.contextPath }/pages/add_Staff.jsp">添加员工</a>
+			<a href="javascript:void(0);" data-id="staff" data-href="${pageContext.request.contextPath }/toAddStaff">添加员工</a>
 		</li>
 		<!--会员管理-->
 		<li>

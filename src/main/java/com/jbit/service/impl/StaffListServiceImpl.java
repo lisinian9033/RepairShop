@@ -31,4 +31,14 @@ public class StaffListServiceImpl implements StaffListService {
 		return staffListDao.delapp(staffNo);
 	}
 
+	@Override
+	public List<StaffList> findStatus() {
+		return staffListDao.findStatus();
+	}
+
+	@Override
+	public List<StaffList> findCareer() {
+		return staffListDao.findCareer();
+	}
+
 }
