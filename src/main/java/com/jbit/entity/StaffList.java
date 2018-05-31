@@ -17,7 +17,16 @@ public class StaffList {
 
     private Integer staffStatus;
 
-    public Integer getStaffNo() {
+    
+    @Override
+	public String toString() {
+		return "StaffList [staffNo=" + staffNo + ", staffName=" + staffName
+				+ ", staffSex=" + staffSex + ", staffCareer=" + staffCareer
+				+ ", staffPhone=" + staffPhone + ", staffEntrytime="
+				+ staffEntrytime + ", staffStatus=" + staffStatus + "]";
+	}
+
+	public Integer getStaffNo() {
         return staffNo;
     }
 

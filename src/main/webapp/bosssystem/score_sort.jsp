@@ -1,7 +1,8 @@
+<%@ page language="java" import="java.util.*" pageEncoding="UTF-8"%>
 <!DOCTYPE html>
 <html>
-	<head>
-		<meta charset="UTF-8">
+<head>
+	<meta charset="utf-8">
 		<title>门店评分排行</title>
 		<link type="text/css" rel="stylesheet" href="../fontsawesome/css/font-awesome.css"/>
 		<link type="text/css" rel="stylesheet" href="../css/datepicker.css"/>

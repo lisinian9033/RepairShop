@@ -8,7 +8,12 @@ PUBLIC "-//mybatis.org//DTD Config 3.0//EN"
 	  <package name="com.jbit.entity"/>
 	</typeAliases>
 	<mappers>
-		<!-- <mapper resource="com/jbit/dao/AfficheMapper.xml" />
-		<mapper resource="com/jbit/dao/AuAuthorityMapper.xml" /> -->
+		<mapper resource="com/jbit/dao/AddGoodsMapper.xml" />
+		<mapper resource="com/jbit/dao/ExpensesListMapper.xml" />
+		<mapper resource="com/jbit/dao/GoodsClassifyMapper.xml" />
+		<mapper resource="com/jbit/dao/OrderListMapper.xml" />
+		<mapper resource="com/jbit/dao/RepairAdminMapper.xml" />
+		<mapper resource="com/jbit/dao/StaffListMapper.xml" />
+		<mapper resource="com/jbit/dao/UserListMapper.xml" />
 	</mappers>
 </configuration>

@@ -1,12 +1,11 @@
-package com.jbit.dao;
+package com.jbit.service;
 
 import java.util.List;
 
 import com.jbit.entity.StaffList;
 
-public interface StaffListDao {
-    StaffList selectByPrimaryKey(Integer staffNo);
-    
+public interface StaffListService {
+
     /**
      * 显示员工列表
      * @return

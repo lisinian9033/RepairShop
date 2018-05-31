@@ -19,4 +19,15 @@
     from staff_list
     where staff_no = #{staffNo,jdbcType=INTEGER}
   </select>
+  
+  <!--显示员工列表  -->
+  <select id="getStaffList" resultMap="BaseResultMap">
+  select * from staff_list order by staff_no asc
+  </select>
+  
+  <!--添加员工信息  -->
+  <insert id="addStaff">
+  insert into staff_list values(default,#{staffName},#{staffSex},#{staffCareer},#{staffPhone},#{staffEntrytime},#{staffStatus})
+  </insert>
+  
 </mapper>

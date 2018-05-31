@@ -71,7 +71,7 @@
 		class="org.springframework.web.servlet.handler.SimpleMappingExceptionResolver">
 		<property name="exceptionMappings">
 			<props>
-				<prop key="java.lang.Exception">pages/404/404</prop>
+				<prop key="java.lang.Exception">/pages/404/404</prop>
 			</props>
 		</property>
 	</bean>

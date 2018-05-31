@@ -1,4 +1,6 @@
 <%@ page language="java" import="java.util.*" pageEncoding="UTF-8"%>
+<%@taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
+<%@taglib prefix="fm" uri="http://java.sun.com/jsp/jstl/fmt" %>
 <!DOCTYPE html>
 <html>
 <head>
@@ -31,14 +33,15 @@
 						</tr>
 					</thead>
 					<tbody>
+					<c:forEach items="${slist}" var="list">
 						<tr id="1"><!--此处id为进行编辑或查看时该条数据的唯一标识-->
-							<td>10000001</td>
-							<td>张三</td>
-							<td>男</td>
-							<td>店长</td>
-							<td>18653624789</td>
-							<td>2017-03-06</td>
-							<td>在岗</td>
+							<td>${list.staffNo }</td>
+							<td>${list.staffName }</td>
+							<td>${list.staffSex }</td>
+							<td>${list.staffCareer }</td>
+							<td>${list.staffPhone }</td>
+							<td><fm:formatDate value="${list.staffEntrytime  }" pattern="yyyy-MM-dd"/></td>
+							<td>${list.staffStatus }</td>
 							<td>
 								<a href="javascript:void(0);" class="table_btn table_edit edit_btn">
 									<i class="fa fa-edit"></i>
@@ -50,25 +53,7 @@
 								</a>
 							</td>
 						</tr>
-						<tr id="2">
-							<td>10000002</td>
-							<td>赵四</td>
-							<td>女</td>
-							<td>财务</td>
-							<td>13666666666</td>
-							<td>2017-03-06</td>
-							<td>离职</td>
-							<td>
-								<a href="javascript:void(0);" class="table_btn table_edit edit_btn">
-									<i class="fa fa-edit"></i>
-									<span>编辑</span>
-								</a>
-								<a href="javascript:void(0);" class="table_btn table_info see_btn">
-									<i class="fa fa-eye"></i>
-									<span>查看业绩</span>
-								</a>
-							</td>
-						</tr>
+						</c:forEach>
 					</tbody>
 				</table>
 			</form>

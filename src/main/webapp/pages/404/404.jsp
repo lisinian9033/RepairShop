@@ -7,7 +7,7 @@
 		<style type="text/css">
 			body{ margin:0; padding:0; background:#efefef; font-family:Georgia, Times, Verdana, Geneva, Arial, Helvetica, sans-serif; }
 			div#mother{ margin:0 auto; width:943px; height:572px; position:relative; }
-			div#errorBox{ background: url(404/404_bg.png) no-repeat top left; width:943px; height:572px; margin:auto; }
+			div#errorBox{ background: url(pages/404/404_bg.png) no-repeat top left; width:943px; height:572px; margin:auto; }
 			div#errorText{ color:#39351e; padding:146px 0 0 446px }
 			div#errorText p{ width:303px; font-size:14px; line-height:26px; }
 			div.link{ /*background:#f90;*/ height:50px; width:145px; float:left; }
@@ -34,10 +34,10 @@
 						火星不太安全，我可以免费送你回地球
 					</p>
 				</div>
-				<a href="jsp/frame.jsp" title="返回超时订单管理页面首页">
+				<a href="pages/login.jsp" title="返回超时登录页面">
 					<div class="link" id="home"></div>
 				</a>
-				<a href="login.jsp" title="联系管理员">
+				<a href="pages/login.jsp" title="联系管理员">
 					<div class="link" id="contact"></div>
 
 				</a>

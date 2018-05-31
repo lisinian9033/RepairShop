@@ -1,15 +1,16 @@
-﻿<!DOCTYPE html>
+﻿<%@ page language="java" import="java.util.*" pageEncoding="UTF-8"%>
+<!DOCTYPE html>
 <html>
 <head>
-<meta charset="UTF-8">
-<title>邻家后台管理</title>
-<link type="text/css" rel="stylesheet" href="../fontsawesome/css/font-awesome.css"/>
-<link type="text/css" rel="stylesheet" href="../css/boss.css"/>
+	<meta charset="utf-8">
+<title>汽车服务商店后台管理</title>
+<link type="text/css" rel="stylesheet" href="${pageContext.request.contextPath }/fontsawesome/css/font-awesome.css"/>
+<link type="text/css" rel="stylesheet" href="${pageContext.request.contextPath }/css/boss.css"/>
 </head>
 <body>
 <div class="header">
 	<div class="logo">
-		<a href="index.html"><img src="../images/logo.png"/></a>
+		<a href="${pageContext.request.contextPath }/pages/index.jsp"><img src="${pageContext.request.contextPath }/images/logo.jpg"/></a>
 	</div>
 	<div class="nav">
 		<ul class="clearfix">
@@ -47,41 +48,41 @@
 		<!--今日数据-->
 		<li>
 			<i class="menu_icon fa fa-line-chart"></i>
-			<a href="javascript:void(0);" data-id="daydata" data-href="today_data.html">今日数据</a>
+			<a href="javascript:void(0);" data-id="daydata" data-href="${pageContext.request.contextPath }/bosssystem/today_data.jsp">今日数据</a>
 		</li>
 		<li>
 			<i class="menu_icon fa fa-money"></i>
-			<a href="javascript:void(0);" data-id="daydata" data-href="today_turnover.html">日营业额</a>
+			<a href="javascript:void(0);" data-id="daydata" data-href="${pageContext.request.contextPath }/bosssystem/today_turnover.jsp">日营业额</a>
 		</li>
 		<li>
 			<i class="menu_icon fa fa-car"></i>
-			<a href="javascript:void(0);" data-id="daydata" data-href="today_washcar.html">日洗车量</a>
+			<a href="javascript:void(0);" data-id="daydata" data-href="${pageContext.request.contextPath }/bosssystem/today_washcar.jsp">日洗车量</a>
 		</li>
 		<!--门店数据-->
 		<li>
 			<i class="menu_icon fa fa-paperclip"></i>
-			<a href="javascript:void(0);" data-id="store" data-href="today_storedata.html">今日实时数据</a>
+			<a href="javascript:void(0);" data-id="store" data-href="${pageContext.request.contextPath }/bosssystem/today_storedata.jsp">今日实时数据</a>
 		</li>
 		<li>
 			<i class="menu_icon fa fa-history"></i>
-			<a href="javascript:void(0);" data-id="store" data-href="before_storedata.html">门店往期数据</a>
+			<a href="javascript:void(0);" data-id="store" data-href="${pageContext.request.contextPath }/bosssystem/before_storedata.jsp">门店往期数据</a>
 		</li>
 		<li>
 			<i class="menu_icon fa fa-sort-amount-desc"></i>
-			<a href="javascript:void(0);" data-id="store" data-href="score_sort.html">门店评分排行</a>
+			<a href="javascript:void(0);" data-id="store" data-href="${pageContext.request.contextPath }/bosssystem/score_sort.jsp">门店评分排行</a>
 		</li>
 		<!--评论-->
 		<li>
 			<i class="menu_icon fa fa-commenting-o"></i>
-			<a href="javascript:void(0);" data-id="comment" data-href="Comment.html">门店全部评价</a>
+			<a href="javascript:void(0);" data-id="comment" data-href="${pageContext.request.contextPath }/pages/Comment.jsp">门店全部评价</a>
 		</li>
 		<li>
 			<i class="menu_icon fa fa-thumbs-o-up"></i>
-			<a href="javascript:void(0);" data-id="comment" data-href="Comment.html">门店好评</a>
+			<a href="javascript:void(0);" data-id="comment" data-href="${pageContext.request.contextPath }/pages/Comment.jsp">门店好评</a>
 		</li>
 		<li>
 			<i class="menu_icon fa fa-thumbs-o-down"></i>
-			<a href="javascript:void(0);" data-id="comment" data-href="Comment.html">门店差评</a>
+			<a href="javascript:void(0);" data-id="comment" data-href="${pageContext.request.contextPath }/pages/Comment.jsp">门店差评</a>
 		</li>
 	</ul>
 </div>
@@ -101,9 +102,9 @@
 </div>
 <!--desktop end-->
 <!--javascript include-->
-<script src="../js/jquery-2.2.1.min.js"></script>
-<script src="../js/tipSuppliers.js"></script>
-<script src="../js/bootstrap-datepicker.js"></script>
+<script src="${pageContext.request.contextPath }/js/jquery-2.2.1.min.js"></script>
+<script src="${pageContext.request.contextPath }/js/tipSuppliers.js"></script>
+<script src="${pageContext.request.contextPath }/js/bootstrap-datepicker.js"></script>
 <script>
 	$("iframe[name='cont_box']").on("load",function(){
 		$(".loading").hide();

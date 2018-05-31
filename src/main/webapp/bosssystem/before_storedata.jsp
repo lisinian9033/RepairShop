@@ -1,11 +1,12 @@
+<%@ page language="java" import="java.util.*" pageEncoding="UTF-8"%>
 <!DOCTYPE html>
 <html>
-	<head>
-		<meta charset="UTF-8">
+<head>
+	<meta charset="utf-8">
 		<title>往期门店数据</title>
-		<link type="text/css" rel="stylesheet" href="../fontsawesome/css/font-awesome.css"/>
-		<link type="text/css" rel="stylesheet" href="../css/datepicker.css"/>
-		<link type="text/css" rel="stylesheet" href="../css/boss.css"/>
+		<link type="text/css" rel="stylesheet" href="${pageContext.request.contextPath }/fontsawesome/css/font-awesome.css"/>
+		<link type="text/css" rel="stylesheet" href="${pageContext.request.contextPath }/css/datepicker.css"/>
+		<link type="text/css" rel="stylesheet" href="${pageContext.request.contextPath }/css/boss.css"/>
 	</head>
 	<body>
 		<div class="main_box echarts_box">
@@ -288,9 +289,9 @@
 			</div>
 		</div>
 		<!--javascript include-->
-		<script src="../js/jquery-2.2.1.min.js"></script>
-		<script src="../js/bootstrap-datepicker.js"></script>
-		<script src="../js/boss.js"></script>
+		<script src="${pageContext.request.contextPath }/js/jquery-2.2.1.min.js"></script>
+		<script src="${pageContext.request.contextPath }/js/bootstrap-datepicker.js"></script>
+		<script src="${pageContext.request.contextPath }/js/boss.js"></script>
 		<script>
 			$(function(){
 				//排列最大最小值

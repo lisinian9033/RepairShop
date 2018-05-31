@@ -10,7 +10,7 @@
 <body>
 <div class="header">
 	<div class="logo">
-		<a href="${pageContext.request.contextPath }/pages/index.jsp"><img src="${pageContext.request.contextPath }/images/logo.png"/></a>
+		<a href="${pageContext.request.contextPath }/pages/index.jsp"><img src="${pageContext.request.contextPath }/images/logo.jpg"/></a>
 	</div>
 	<div class="nav">
 		<ul class="clearfix">
@@ -111,7 +111,7 @@
 		<!--员工管理-->
 		<li>
 			<i class="menu_icon fa fa-users"></i>
-			<a href="javascript:void(0);" data-id="staff" data-href="${pageContext.request.contextPath }/pages/staff_List.jsp">员工列表</a>
+			<a href="javascript:void(0);" data-id="staff" data-href="${pageContext.request.contextPath }/staffList">员工列表</a>
 		</li>
 		<li>
 			<i class="menu_icon fa fa-plus-square"></i>
