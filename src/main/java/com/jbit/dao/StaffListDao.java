@@ -33,4 +33,12 @@ public interface StaffListDao {
     * 查询所有员工岗位
     */
    List<StaffList> findCareer();
+   
+   /**
+    * 根据员工状态查询员工信息
+    * @param staffStatus 员工是否在职的状态
+    * @return 所有员工信息
+    */
+   List<StaffList> findAllByStatus(String staffStatus);
+   
 }

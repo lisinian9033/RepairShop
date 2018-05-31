@@ -41,4 +41,9 @@ public class StaffListServiceImpl implements StaffListService {
 		return staffListDao.findCareer();
 	}
 
+	@Override
+	public List<StaffList> findAllByStatus(String staffStatus) {
+		return staffListDao.findAllByStatus(staffStatus);
+	}
+
 }

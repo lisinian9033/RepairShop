@@ -35,6 +35,11 @@
   select DISTINCT `staff_career` FROM `staff_list`
   </select>
   
+  <!-- 根据员工状态查询员工信息 -->
+  <select id="findAllByStatus" resultMap="BaseResultMap">
+  SELECT * FROM `staff_list` WHERE `staff_status`=#{staffStatus}
+  </select>
+  
   <!--添加员工信息  -->
   <insert id="addStaff">
   insert into staff_list values(default,#{staffName},#{staffSex},#{staffCareer},#{staffPhone},now(),#{staffStatus})

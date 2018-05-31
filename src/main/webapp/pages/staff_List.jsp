@@ -16,8 +16,9 @@
 				<form action="#" method="post" id="staff_form">
 					<div class="search_formbox clearfix">
 						<button type="button" id="job" class="btn blue_btn curr">全部员工</button>
-						<button type="button" id="quit" class="btn blue_btn">在职员工</button>
-						<button type="button" id="all" class="btn blue_btn">离职员工</button>
+						<button type="button" id="quit" class="btn blue_btn ">在职员工</button>
+						<button type="button" id="dimission" class="btn blue_btn">离职员工</button>
+						<button type="button" id="practice" class="btn blue_btn">实习员工</button>
 					</div>
 					<table border="0" cellspacing="0" cellpadding="0" class="table" id="table_box">
 					<thead>
@@ -83,6 +84,47 @@
 						type:"post",
 						url:"#",
 						data:{"id":dataId},
+						success:function(data){
+							that.addClass("curr").siblings().removeClass("curr");
+						}
+					});
+				});
+				
+				$("#job").click(function(){//全部员工
+					$.ajax({
+						type:"post",
+						url:"#",
+						data:{"staffStatus":""},
+						success:function(data){
+							that.addClass("curr").siblings().removeClass("curr");
+						}
+					});
+				});
+				$("#quit").click(function(){//在职员工
+					$.ajax({
+						type:"post",
+						url:"#",
+						data:{"staffStatus":"在职"},
+						success:function(data){
+							that.addClass("curr").siblings().removeClass("curr");
+						}
+					});
+				});
+				$("#dimission").click(function(){//离职员工
+					$.ajax({
+						type:"post",
+						url:"#",
+						data:{"staffStatus":"离职"},
+						success:function(data){
+							that.addClass("curr").siblings().removeClass("curr");
+						}
+					});
+				});
+				$("#practice").click(function(){//实习员工
+					$.ajax({
+						type:"post",
+						url:"#",
+						data:{"staffStatus":"实习"},
 						success:function(data){
 							that.addClass("curr").siblings().removeClass("curr");
 						}
