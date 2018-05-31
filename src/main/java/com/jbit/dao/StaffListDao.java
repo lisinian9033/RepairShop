@@ -19,4 +19,9 @@ public interface StaffListDao {
      * @return 受影响行数
      */
     int addStaff(StaffList staffList);
+    
+    /**
+	 * 删除员工
+	 */
+   int delapp(int staffNo);
 }

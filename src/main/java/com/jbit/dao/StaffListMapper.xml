@@ -27,7 +27,12 @@
   
   <!--添加员工信息  -->
   <insert id="addStaff">
-  insert into staff_list values(default,#{staffName},#{staffSex},#{staffCareer},#{staffPhone},#{staffEntrytime},#{staffStatus})
+  insert into staff_list values(default,#{staffName},#{staffSex},#{staffCareer},#{staffPhone},now(),#{staffStatus})
   </insert>
+  
+  <!--删除员工  -->
+  <delete id="delapp">
+  delete from staff_list where staff_no=#{staffNo}
+  </delete>
   
 </mapper>

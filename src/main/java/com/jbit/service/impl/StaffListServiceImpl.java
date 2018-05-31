@@ -26,4 +26,9 @@ public class StaffListServiceImpl implements StaffListService {
 		return staffListDao.addStaff(staffList);
 	}
 
+	@Override
+	public int delapp(int staffNo) {
+		return staffListDao.delapp(staffNo);
+	}
+
 }
