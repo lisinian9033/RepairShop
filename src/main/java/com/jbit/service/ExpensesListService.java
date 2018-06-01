@@ -1,13 +1,12 @@
-package com.jbit.dao;
+package com.jbit.service;
 
 import java.util.List;
 
 import com.jbit.entity.ExpensesList;
 
-public interface ExpensesListDao {
-    ExpensesList selectByPrimaryKey(Integer expensesNo);
-    
-    /**
+public interface ExpensesListService {
+
+	/**
      * 显示消耗品
      */
     List<ExpensesList> getExpensesList();

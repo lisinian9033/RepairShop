@@ -1,4 +1,6 @@
 <%@ page language="java" import="java.util.*" pageEncoding="UTF-8"%>
+<%@taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
+<%@taglib prefix="fm" uri="http://java.sun.com/jsp/jstl/fmt" %>
 <!DOCTYPE html>
 <html>
 <head>
@@ -23,8 +25,10 @@
 					</tr>
 				</thead>
 				<tbody>
-					<tr id="1"><!--此处id为进行入库或出库时该条数据的唯一标识-->
-						<td>高级洗护</td>
+				
+				<c:forEach items="${glist}" var="list">
+					<tr id="${list.classifyNo }"><!--此处id为进行入库或出库时该条数据的唯一标识-->
+						<td>${list.classifyName }</td>
 						<td>
 							<a href="javascript:void(0);" class="table_btn table_edit edit_btn">
 								<i class="fa fa-edit"></i>
@@ -36,19 +40,7 @@
 							</a>
 						</td>
 					</tr>
-					<tr id="2">
-						<td>车内饰品</td>
-						<td>
-							<a href="javascript:void(0);" class="table_btn table_edit edit_btn">
-								<i class="fa fa-edit"></i>
-								<span>编辑</span>
-							</a>
-							<a href="javascript:void(0);" class="table_btn table_del del_btn">
-								<i class="fa fa-trash-o"></i>
-								<span>删除</span>
-							</a>
-						</td>
-					</tr>
+					</c:forEach>
 				</tbody>
 			</table>
 		</div>

@@ -15,4 +15,8 @@
     from expenses_list
     where expenses_no = #{expensesNo,jdbcType=INTEGER}
   </select>
+  
+  <select id="getExpensesList" resultMap="BaseResultMap">
+  SELECT * FROM expenses_list
+  </select>
 </mapper>

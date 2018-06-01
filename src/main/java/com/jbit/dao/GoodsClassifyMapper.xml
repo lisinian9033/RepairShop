@@ -14,4 +14,8 @@
     from goods_classify
     where classify_no = #{classifyNo,jdbcType=INTEGER}
   </select>
+  
+  <select id="getGoodsClassifylist" resultMap="BaseResultMap">
+  SELECT * FROM goods_classify
+  </select>
 </mapper>

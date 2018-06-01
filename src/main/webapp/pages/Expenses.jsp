@@ -1,4 +1,6 @@
 <%@ page language="java" import="java.util.*" pageEncoding="UTF-8"%>
+<%@taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
+<%@taglib prefix="fm" uri="http://java.sun.com/jsp/jstl/fmt" %>
 <!DOCTYPE html>
 <html>
 <head>
@@ -24,9 +26,11 @@
 					</tr>
 				</thead>
 				<tbody>
-					<tr id="1"><!--此处id为进行入库或出库时该条数据的唯一标识-->
-						<td>玻璃水</td>
-						<td>100</td>
+				
+				<c:forEach items="${elist}" var="list">
+					<tr id="${list.expensesNo }"><!--此处id为进行入库或出库时该条数据的唯一标识-->
+						<td>${list.expensesName }</td>
+						<td>${list.expensesQuantity }</td>
 						<td>
 							<a href="javascript:void(0);" class="table_btn table_info sign_in">
 								<i class="fa fa-sign-in"></i>
@@ -38,20 +42,8 @@
 							</a>
 						</td>
 					</tr>
-					<tr id="2">
-						<td>毛巾</td>
-						<td>9999</td>
-						<td>
-							<a href="javascript:void(0);" class="table_btn table_info sign_in">
-								<i class="fa fa-sign-in"></i>
-								<span>入库</span>
-							</a>
-							<a href="javascript:void(0);" class="table_btn table_del sign_out">
-								<i class="fa fa-sign-out"></i>
-								<span>出库</span>
-							</a>
-						</td>
-					</tr>
+					</c:forEach>
+	
 				</tbody>
 			</table>
 		</div>

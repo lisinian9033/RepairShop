@@ -97,7 +97,7 @@
 		</li>
 		<li>
 			<i class="menu_icon fa fa-sitemap"></i>
-			<a href="javascript:void(0);" data-id="goods" data-href="${pageContext.request.contextPath }/pages/goods_CLassify.jsp">商品分类管理</a>
+			<a href="javascript:void(0);" data-id="goods" data-href="${pageContext.request.contextPath }/goodsClassifylist">商品分类管理</a>
 		</li>
 		<!--消耗管理-->
 		<li>
@@ -106,7 +106,7 @@
 		</li>
 		<li>
 			<i class="menu_icon fa fa-hourglass-half"></i>
-			<a href="javascript:void(0);" data-id="expenses" data-href="${pageContext.request.contextPath }/pages/Expenses.jsp">消耗品管理</a>
+			<a href="javascript:void(0);" data-id="expenses" data-href="${pageContext.request.contextPath }/getExpensesList">消耗品管理</a>
 		</li>
 		<!--员工管理-->
 		<li>
