@@ -75,6 +75,7 @@ public class StaffListController {
 		System.out.println("--->"+staffStatus);
 		List<StaffList> ss=staffListService.findAllByStatus(staffStatus);
 		model.addAttribute("ss",ss);
+		System.out.println("----><----");
 		return "pages/staff_List";
 	}
 }

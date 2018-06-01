@@ -38,7 +38,7 @@
   <!-- 根据员工状态查询员工信息 -->
   <select id="findAllByStatus" parameterType="String" resultMap="BaseResultMap">
   SELECT * FROM `staff_list` where 1=1
-    <if test="_parameter!=null">and `staff_status`=#{staffStatus}</if>
+    <if test="_parameter!=''">and `staff_status`=#{staffStatus}</if>
   </select>
   
   <!--添加员工信息  -->

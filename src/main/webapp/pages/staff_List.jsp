@@ -34,6 +34,7 @@
 						</tr>
 					</thead>
 					<tbody>
+					<c:if test="${not empty slist}">
 					<c:forEach items="${slist}" var="list">
 						<tr id="1"><!--此处id为进行编辑或查看时该条数据的唯一标识-->
 							<td>${list.staffNo }</td>
@@ -59,7 +60,8 @@
 							</td>
 						</tr>
 						</c:forEach>
-						<c:if test="${ss} is not null">
+						</c:if>
+						<c:if test="${empty slist}">
 						<c:forEach items="${ss}" var="s">
 						<tr id="1"><!--此处id为进行编辑或查看时该条数据的唯一标识-->
 							<td>${s.staffNo }</td>
