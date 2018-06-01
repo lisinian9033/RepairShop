@@ -6,6 +6,7 @@ import javax.annotation.Resource;
 import javax.servlet.http.HttpSession;
 
 import org.springframework.stereotype.Controller;
+import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.ResponseBody;
@@ -24,9 +25,9 @@ public class StaffListController {
 	 * 显示员工列表信息
 	 */
 	@RequestMapping(value = "staffList")
-	public String staffList(HttpSession session){
+	public String staffList(Model model){
 		List<StaffList> slist=staffListService.getStaffList();
-		session.setAttribute("slist", slist);
+		model.addAttribute("slist", slist);
 		return "pages/staff_List";
 	}
 	
@@ -34,11 +35,11 @@ public class StaffListController {
 	 * 跳转到添加员工页面
 	 */
 	@RequestMapping(value = "toAddStaff")
-	public String toAddStaff(HttpSession session){
+	public String toAddStaff(Model model){
 		List<StaffList> status=staffListService.findStatus();
 		List<StaffList> career=staffListService.findCareer();
-		session.setAttribute("status", status);//状态
-		session.setAttribute("career", career);//岗位
+		model.addAttribute("status", status);//状态
+		model.addAttribute("career", career);//岗位
 		return "pages/add_Staff";
 	}
 	/**
