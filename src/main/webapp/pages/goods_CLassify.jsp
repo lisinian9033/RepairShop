@@ -34,7 +34,7 @@
 								<i class="fa fa-edit"></i>
 								<span>编辑</span>
 							</a>
-							<a href="javascript:void(0);" class="table_btn table_del del_btn">
+							<a class="table_btn table_del del_btn delGoodsClassify" classifyNo=#{list.classifyNo } classifyName=#{list.classifyName }>
 								<i class="fa fa-trash-o"></i>
 								<span>删除</span>
 							</a>

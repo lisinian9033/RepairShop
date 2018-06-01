@@ -14,8 +14,19 @@
     from goods_classify
     where classify_no = #{classifyNo,jdbcType=INTEGER}
   </select>
-  
+  <!-- 查询商品分类 -->
   <select id="getGoodsClassifylist" resultMap="BaseResultMap">
   SELECT * FROM goods_classify
   </select>
+  
+  <!-- 商品分类添加  -->
+  <insert id="insertGoodsClassify">
+  	INSERT INTO goods_classify VALUES(DEFAULT,#{classifyName})
+  </insert>
+  
+  <!-- 删除分类  -->
+  <delete id="deleteGoodsClassify">
+ 	 DELETE FROM goods_classify WHERE classify_no=#{classifyNo}
+  </delete>
+  
 </mapper>

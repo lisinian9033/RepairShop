@@ -10,11 +10,11 @@
 	<body>
 		<div class="main_box">
 			<div class="cont_box" style="margin-top:20px;">
-				<form action="#" method="post" id="add_cyform">
+				<form action="${pageContext.request.contextPath }/insertGoodsClassify" method="post" id="add_cyform">
 					<ul class="addpro_box">
 						<li>
 							<label>商品分类名称：</label>
-							<input type="text" placeholder="请输入商品分类名称" name="proname" required data-rule-proname="true" data-msg-required="商品分类名称不能为空" data-msg-proname="请输入正确的商品分类名称"/>
+							<input type="text" placeholder="请输入商品分类名称" name="classifyName" required data-rule-proname="true" data-msg-required="商品分类名称不能为空" data-msg-proname="请输入正确的商品分类名称"/>
 						</li>
 					</ul>
 					<div class="probtn_box clearfix">

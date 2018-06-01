@@ -11,4 +11,15 @@ public interface GoodsClassifyDao {
 	 * @return
 	 */
 	List<GoodsClassify> getGoodsClassifylist();
+	
+	/**
+	 * 添加商品分类
+	 */
+	int insertGoodsClassify(GoodsClassify goodsClassify);
+	
+	
+	/**
+	 * 删除分类
+	 */
+	int deleteGoodsClassify(int no);
 }

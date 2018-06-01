@@ -22,5 +22,18 @@ public class GoodsClassifyServiceImpl implements GoodsClassifyService {
 		
 		return goodsClassifyDao.getGoodsClassifylist();
 	}
+	
+
+	@Override
+	public int insertGoodsClassify(GoodsClassify goodsClassify) {
+		return goodsClassifyDao.insertGoodsClassify(goodsClassify);
+	}
+
+
+	@Override
+	public int deleteGoodsClassify(int no) {
+		
+		return goodsClassifyDao.deleteGoodsClassify(no);
+	}
 
 }
