@@ -74,11 +74,13 @@ public class StaffList {
         this.staffEntrytime = staffEntrytime;
     }
 
-    public String getStaffStatus() {
-        return staffStatus;
-    }
+	public String getStaffStatus() {
+		return staffStatus;
+	}
 
-    public void setStaffStatus(String staffStatus) {
-        this.staffStatus = staffStatus;
-    }
+	public void setStaffStatus(String staffStatus) {
+		this.staffStatus = staffStatus;
+	}
+
+   
 }

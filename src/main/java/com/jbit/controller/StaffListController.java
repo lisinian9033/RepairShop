@@ -1,7 +1,6 @@
 package com.jbit.controller;
 
 import java.util.List;
-
 import javax.annotation.Resource;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
@@ -67,5 +66,15 @@ public class StaffListController {
 		}
 		return result;
 	
+	}
+	/**
+	 *通过状态查询员工信息
+	 */
+	@RequestMapping(value = "selectByStatus",method=RequestMethod.POST)
+	public String selectByStatus(String staffStatus,Model model){
+		System.out.println("--->"+staffStatus);
+		List<StaffList> ss=staffListService.findAllByStatus(staffStatus);
+		model.addAttribute("ss",ss);
+		return "pages/staff_List";
 	}
 }

@@ -22,7 +22,7 @@
   
   <!--显示员工列表  -->
   <select id="getStaffList" resultMap="BaseResultMap">
-  select * from staff_list order by staff_no asc
+  select * from staff_list
   </select>
   
   <!--查询所有员工状态  -->
@@ -36,8 +36,9 @@
   </select>
   
   <!-- 根据员工状态查询员工信息 -->
-  <select id="findAllByStatus" resultMap="BaseResultMap">
-  SELECT * FROM `staff_list` WHERE `staff_status`=#{staffStatus}
+  <select id="findAllByStatus" parameterType="String" resultMap="BaseResultMap">
+  SELECT * FROM `staff_list` where 1=1
+    <if test="_parameter!=null">and `staff_status`=#{staffStatus}</if>
   </select>
   
   <!--添加员工信息  -->

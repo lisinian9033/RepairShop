@@ -2,6 +2,8 @@ package com.jbit.service;
 
 import java.util.List;
 
+import org.apache.ibatis.annotations.Param;
+
 import com.jbit.entity.StaffList;
 
 public interface StaffListService {
@@ -36,5 +38,5 @@ public interface StaffListService {
      * @param staffStatus 员工是否在职的状态
      * @return 所有员工信息
      */
-    List<StaffList> findAllByStatus(String staffStatus);
+    List<StaffList> findAllByStatus(@Param("staffStatus") String staffStatus);
 }

@@ -15,10 +15,10 @@
 			<div class="cont_box">
 				<form action="#" method="post" id="staff_form">
 					<div class="search_formbox clearfix">
-						<button type="button" id="job" class="btn blue_btn curr">全部员工</button>
-						<button type="button" id="quit" class="btn blue_btn ">在职员工</button>
-						<button type="button" id="dimission" class="btn blue_btn">离职员工</button>
-						<button type="button" id="practice" class="btn blue_btn">实习员工</button>
+						<button type="button" id="job" class="btn blue_btn curr" value="" >全部员工</button>
+						<button type="button" id="quit" class="btn blue_btn" value="在职">在职员工</button>
+						<button type="button" id="dimission" class="btn blue_btn" value="离职">离职员工</button>
+						<button type="button" id="practice" class="btn blue_btn" value="实习">实习员工</button>
 					</div>
 					<table border="0" cellspacing="0" cellpadding="0" class="table" id="table_box">
 					<thead>
@@ -59,6 +59,33 @@
 							</td>
 						</tr>
 						</c:forEach>
+						<c:if test="${ss} is not null">
+						<c:forEach items="${ss}" var="s">
+						<tr id="1"><!--此处id为进行编辑或查看时该条数据的唯一标识-->
+							<td>${s.staffNo }</td>
+							<td>${s.staffName }</td>
+							<td>${s.staffSex }</td>
+							<td>${s.staffCareer }</td>
+							<td>${s.staffPhone }</td>
+							<td><fm:formatDate value="${s.staffEntrytime  }" pattern="yyyy-MM-dd"/></td>
+							<td>${s.staffStatus }</td>
+							<td>
+								<a href="javascript:void(0);" class="table_btn table_edit edit_btn">
+									<i class="fa fa-edit"></i>
+									<span>编辑</span>
+								</a>
+								<a href="javascript:void(0);" class="table_btn table_info see_btn">
+									<i class="fa fa-eye"></i>
+									<span>查看业绩</span>
+								</a>
+								<a  class="table_btn table_del del_btn delStaff" staffNo=${s.staffNo } staffName=${s.staffName } data-toggle="tooltip" data-placement="top" data-original-title="删除员工基本信息">
+								<i class="fa fa-trash-o"></i>
+								<span>删除</span>
+								</a>
+							</td>
+						</tr>
+						</c:forEach>
+						</c:if>
 					</tbody>
 				</table>
 			</form>
@@ -77,57 +104,42 @@
 				$("body").tipWindow({method:"edit",type:"form",Class:".edit_btn",even:"click",tipTit:"编辑员工信息",Twidth:"700",Theight:"460",editUrl:"${pageContext.request.contextPath }/pages/edit_Staff.jsp"});//editUrl 编辑员工信息请求地址
 				$("body").tipWindow({method:"edit",type:"form",Class:".see_btn",even:"click",tipTit:"员工业绩",Twidth:"998",Theight:"600",editUrl:"${pageContext.request.contextPath }/pages/staff_Achievement.jsp"});//editUrl 员工业绩请求地址
 				//员工筛选
-				$(".search_formbox .btn").click(function(){
-					var dataId = $(this).prop("id"),//员工状态id
-						that = $(this);
-					$.ajax({
-						type:"post",
-						url:"#",
-						data:{"id":dataId},
-						success:function(data){
-							that.addClass("curr").siblings().removeClass("curr");
-						}
-					});
-				});
 				
 				$("#job").click(function(){//全部员工
+					alert(0);
+				   var staffStatus=$(this).val();
 					$.ajax({
 						type:"post",
-						url:"#",
-						data:{"staffStatus":""},
-						success:function(data){
-							that.addClass("curr").siblings().removeClass("curr");
-						}
+						url:"selectByStatus",
+						data:{"staffStatus":staffStatus},
+						dataType:"text"
 					});
 				});
 				$("#quit").click(function(){//在职员工
+					alert(1);
+					var staffStatus=$(this).val();
 					$.ajax({
 						type:"post",
-						url:"#",
-						data:{"staffStatus":"在职"},
-						success:function(data){
-							that.addClass("curr").siblings().removeClass("curr");
-						}
+						url:"selectByStatus",
+						data:{"staffStatus":staffStatus}
 					});
 				});
 				$("#dimission").click(function(){//离职员工
+					alert(2);
+					var staffStatus=$(this).val();
 					$.ajax({
 						type:"post",
-						url:"#",
-						data:{"staffStatus":"离职"},
-						success:function(data){
-							that.addClass("curr").siblings().removeClass("curr");
-						}
+						url:"selectByStatus",
+						data:{"staffStatus":staffStatus}
 					});
 				});
 				$("#practice").click(function(){//实习员工
+					alert(3);
+					var staffStatus=$(this).val();
 					$.ajax({
 						type:"post",
-						url:"#",
-						data:{"staffStatus":"实习"},
-						success:function(data){
-							that.addClass("curr").siblings().removeClass("curr");
-						}
+						url:"selectByStatus",
+						data:{"staffStatus":staffStatus}
 					});
 				});
 			});
