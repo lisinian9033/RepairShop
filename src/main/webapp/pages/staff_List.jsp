@@ -52,8 +52,8 @@
 									<i class="fa fa-eye"></i>
 									<span>查看业绩</span>
 								</a>
-								<a  class="table_btn table_edit delStaff" staffNo=${list.staffNo } staffName=${list.staffName } data-toggle="tooltip" data-placement="top" data-original-title="删除员工基本信息">
-								<i class="fa fa-edit"></i>
+								<a  class="table_btn table_del del_btn delStaff" staffNo=${list.staffNo } staffName=${list.staffName } data-toggle="tooltip" data-placement="top" data-original-title="删除员工基本信息">
+								<i class="fa fa-trash-o"></i>
 								<span>删除</span>
 								</a>
 							</td>
