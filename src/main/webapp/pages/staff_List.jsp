@@ -13,12 +13,12 @@
 		<div class="main_box">
 			<h2><span></span>员工列表</h2>
 			<div class="cont_box">
-				<form action="#" method="post" id="staff_form">
+				<form action="${pageContext.request.contextPath }/selectByStatus" id="staff_form" method="post">
 					<div class="search_formbox clearfix">
-						<button type="button" id="job" class="btn blue_btn curr" value="" >全部员工</button>
-						<button type="button" id="quit" class="btn blue_btn" value="在职">在职员工</button>
-						<button type="button" id="dimission" class="btn blue_btn" value="离职">离职员工</button>
-						<button type="button" id="practice" class="btn blue_btn" value="实习">实习员工</button>
+						<button type="submit" id="job" class="btn blue_btn curr" value="" name="staffStatus" >全部员工</button>
+						<button type="submit" id="quit" class="btn blue_btn" value="在职" name="staffStatus">在职员工</button>
+						<button type="submit" id="dimission" class="btn blue_btn" value="离职" name="staffStatus">离职员工</button>
+						<button type="submit" id="practice" class="btn blue_btn" value="实习" name="staffStatus">实习员工</button>
 					</div>
 					<table border="0" cellspacing="0" cellpadding="0" class="table" id="table_box">
 					<thead>
@@ -103,47 +103,10 @@
 		<script>
 			$(function(){
 				$("body").other({tableId:"#table_box",tableWrap:[1,7],tableAas:[ 0,"desc"],tableSearch:true});
-				$("body").tipWindow({method:"edit",type:"form",Class:".edit_btn",even:"click",tipTit:"编辑员工信息",Twidth:"700",Theight:"460",editUrl:"${pageContext.request.contextPath }/pages/edit_Staff.jsp"});//editUrl 编辑员工信息请求地址
+				$("body").tipWindow({method:"edit",type:"form",Class:".edit_btn",even:"click",tipTit:"编辑员工信息",Twidth:"700",Theight:"460",editUrl:"${pageContext.request.contextPath }/selectByStatusNo?staffNo=${s.staffNo }"});//editUrl 编辑员工信息请求地址
 				$("body").tipWindow({method:"edit",type:"form",Class:".see_btn",even:"click",tipTit:"员工业绩",Twidth:"998",Theight:"600",editUrl:"${pageContext.request.contextPath }/pages/staff_Achievement.jsp"});//editUrl 员工业绩请求地址
 				//员工筛选
 				
-				$("#job").click(function(){//全部员工
-					alert(0);
-				   var staffStatus=$(this).val();
-					$.ajax({
-						type:"post",
-						url:"selectByStatus",
-						data:{"staffStatus":staffStatus},
-						dataType:"text"
-					});
-				});
-				$("#quit").click(function(){//在职员工
-					alert(1);
-					var staffStatus=$(this).val();
-					$.ajax({
-						type:"post",
-						url:"selectByStatus",
-						data:{"staffStatus":staffStatus}
-					});
-				});
-				$("#dimission").click(function(){//离职员工
-					alert(2);
-					var staffStatus=$(this).val();
-					$.ajax({
-						type:"post",
-						url:"selectByStatus",
-						data:{"staffStatus":staffStatus}
-					});
-				});
-				$("#practice").click(function(){//实习员工
-					alert(3);
-					var staffStatus=$(this).val();
-					$.ajax({
-						type:"post",
-						url:"selectByStatus",
-						data:{"staffStatus":staffStatus}
-					});
-				});
 			});
 		</script>
 	</body>

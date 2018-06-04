@@ -72,10 +72,17 @@ public class StaffListController {
 	 */
 	@RequestMapping(value = "selectByStatus",method=RequestMethod.POST)
 	public String selectByStatus(String staffStatus,Model model){
-		System.out.println("--->"+staffStatus);
 		List<StaffList> ss=staffListService.findAllByStatus(staffStatus);
 		model.addAttribute("ss",ss);
-		System.out.println("----><----");
 		return "pages/staff_List";
+	}
+	
+	/**
+	 *通过员工编号查询员工信息
+	 */
+	@RequestMapping(value = "selectByStatusNo")
+	public String selectByStatusNo(int staffNo,Model model){
+		/*model.addAttribute("ss",ss);*/
+		return "pages/edit_Staff.jsp";
 	}
 }
