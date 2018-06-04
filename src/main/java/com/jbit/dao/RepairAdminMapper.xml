@@ -5,4 +5,10 @@
     <result column="loginname" jdbcType="VARCHAR" property="loginname" />
     <result column="password" jdbcType="VARCHAR" property="password" />
   </resultMap>
+    <!-- AuUser登录 -->
+  <select id="login" resultType="RepairAdmin">
+  		SELECT * FROM repair_admin 
+  		WHERE
+  	    loginname=#{loginname} AND PASSWORD=#{password}
+  </select>
 </mapper>
