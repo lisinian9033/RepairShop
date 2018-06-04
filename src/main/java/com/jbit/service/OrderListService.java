@@ -1,13 +1,14 @@
-package com.jbit.dao;
+package com.jbit.service;
 
 import java.util.List;
 
+import org.apache.ibatis.annotations.Param;
+
 import com.jbit.entity.OrderList;
 
-public interface OrderListDao {
-    OrderList selectByPrimaryKey(Integer orderNo);
-    
-    /**
+public interface OrderListService {
+
+	   /**
      *查询所有订单 
      * @return 所有订单
      */
@@ -18,5 +19,5 @@ public interface OrderListDao {
      * @param orderNo 订单编号
      * @return 订单实体
      */
-    OrderList getOneOrder(Integer orderNo);
+    OrderList getOneOrder(@Param("orderNo") Integer orderNo);
 }

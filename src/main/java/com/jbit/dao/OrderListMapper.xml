@@ -21,4 +21,13 @@
     from order_list
     where order_no = #{orderNo,jdbcType=INTEGER}
   </select>
+  
+  <select id="getAllOrder" resultMap="BaseResultMap">
+   select * from order_list
+  </select>
+  
+  <select id="getOneOrder" resultMap="BaseResultMap">
+  select * from order_list where order_no=#{orderNo}
+  </select>
+  
 </mapper>
