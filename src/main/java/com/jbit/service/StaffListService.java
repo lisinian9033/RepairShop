@@ -39,4 +39,11 @@ public interface StaffListService {
      * @return 所有员工信息
      */
     List<StaffList> findAllByStatus(@Param("staffStatus") String staffStatus);
+    
+    /**
+     * 根据编号查找员工信息
+     * @param staffNo 员工编号
+     * @return 员工实体类
+     */
+    StaffList getStaffByNo(@Param("staffNo") Integer staffNo);
 }

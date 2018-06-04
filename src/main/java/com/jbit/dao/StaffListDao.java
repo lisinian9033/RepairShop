@@ -41,4 +41,11 @@ public interface StaffListDao {
     */
    List<StaffList> findAllByStatus(String staffStatus);
    
+   /**
+    * 根据编号查找员工信息
+    * @param staffNo 员工编号
+    * @return 员工实体类
+    */
+   StaffList getStaffByNo(Integer staffNo);
+   
 }

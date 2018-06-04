@@ -41,6 +41,11 @@
     <if test="_parameter!=''">and `staff_status`=#{staffStatus}</if>
   </select>
   
+  <!-- 根据编号查找员工信息 -->
+  <select id="getStaffByNo" resultMap="BaseResultMap">
+  SELECT * FROM `staff_list` where staff_no = #{staffNo}
+  </select>
+  
   <!--添加员工信息  -->
   <insert id="addStaff">
   insert into staff_list values(default,#{staffName},#{staffSex},#{staffCareer},#{staffPhone},now(),#{staffStatus})

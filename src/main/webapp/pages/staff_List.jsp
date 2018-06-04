@@ -15,7 +15,8 @@
 			<div class="cont_box">
 				<form action="${pageContext.request.contextPath }/selectByStatus" id="staff_form" method="post">
 					<div class="search_formbox clearfix">
-						<button type="submit" id="job" class="btn blue_btn curr" value="" name="staffStatus" >全部员工</button>
+					<%--curr--%>
+					    <button type="submit" id="job" class="btn blue_btn" value="" name="staffStatus" >全部员工</button>
 						<button type="submit" id="quit" class="btn blue_btn" value="在职" name="staffStatus">在职员工</button>
 						<button type="submit" id="dimission" class="btn blue_btn" value="离职" name="staffStatus">离职员工</button>
 						<button type="submit" id="practice" class="btn blue_btn" value="实习" name="staffStatus">实习员工</button>
@@ -45,11 +46,11 @@
 							<td><fm:formatDate value="${list.staffEntrytime  }" pattern="yyyy-MM-dd"/></td>
 							<td>${list.staffStatus }</td>
 							<td>
-								<a href="javascript:void(0);" class="table_btn table_edit edit_btn">
+								<a href="javascript:void(0);" class="table_btn table_edit edit_btn" staffNo=${list.staffNo }>
 									<i class="fa fa-edit"></i>
 									<span>编辑</span>
 								</a>
-								<a href="javascript:void(0);" class="table_btn table_info see_btn">
+								<a href="javascript:void(0);" class="table_btn table_info see_btn" staffNo=${list.staffNo }>
 									<i class="fa fa-eye"></i>
 									<span>查看业绩</span>
 								</a>
@@ -72,11 +73,11 @@
 							<td><fm:formatDate value="${s.staffEntrytime  }" pattern="yyyy-MM-dd"/></td>
 							<td>${s.staffStatus }</td>
 							<td>
-								<a href="javascript:void(0);" class="table_btn table_edit edit_btn">
+								<a href="javascript:void(0);" class="table_btn table_edit edit_btn" staffNo=${s.staffNo }>
 									<i class="fa fa-edit"></i>
 									<span>编辑</span>
 								</a>
-								<a href="javascript:void(0);" class="table_btn table_info see_btn">
+								<a href="javascript:void(0);" class="table_btn table_info see_btn" staffNo=${s.staffNo }>
 									<i class="fa fa-eye"></i>
 									<span>查看业绩</span>
 								</a>
@@ -103,7 +104,7 @@
 		<script>
 			$(function(){
 				$("body").other({tableId:"#table_box",tableWrap:[1,7],tableAas:[ 0,"desc"],tableSearch:true});
-				$("body").tipWindow({method:"edit",type:"form",Class:".edit_btn",even:"click",tipTit:"编辑员工信息",Twidth:"700",Theight:"460",editUrl:"${pageContext.request.contextPath }/selectByStatusNo?staffNo=${s.staffNo }"});//editUrl 编辑员工信息请求地址
+				$("body").tipWindow({method:"edit",type:"form",Class:".edit_btn",even:"click",tipTit:"编辑员工信息",Twidth:"700",Theight:"460",editUrl:"${pageContext.request.contextPath }/selectByStatusNo"});//editUrl 编辑员工信息请求地址
 				$("body").tipWindow({method:"edit",type:"form",Class:".see_btn",even:"click",tipTit:"员工业绩",Twidth:"998",Theight:"600",editUrl:"${pageContext.request.contextPath }/pages/staff_Achievement.jsp"});//editUrl 员工业绩请求地址
 				//员工筛选
 				

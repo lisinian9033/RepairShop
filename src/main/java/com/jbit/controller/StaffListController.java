@@ -81,8 +81,15 @@ public class StaffListController {
 	 *通过员工编号查询员工信息
 	 */
 	@RequestMapping(value = "selectByStatusNo")
-	public String selectByStatusNo(int staffNo,Model model){
-		/*model.addAttribute("ss",ss);*/
-		return "pages/edit_Staff.jsp";
+	public String selectByStatusNo(Integer staffNo,Model model){
+		System.out.println("--->staffNo"+staffNo);
+		StaffList staff=staffListService.getStaffByNo(staffNo);
+		List<StaffList> status=staffListService.findStatus();
+		List<StaffList> career=staffListService.findCareer();
+		model.addAttribute("status", status);//状态
+		model.addAttribute("career", career);//岗位
+		model.addAttribute("staff",staff);//员工
+		System.out.println("---><---");
+		return "pages/edit_Staff";
 	}
 }

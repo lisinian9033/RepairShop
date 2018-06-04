@@ -1,4 +1,5 @@
 <%@ page language="java" import="java.util.*" pageEncoding="UTF-8"%>
+<%@taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <!DOCTYPE html>
 <html>
 <head>
@@ -14,11 +15,11 @@
 					<ul class="addpro_box">
 						<li>
 							<label>姓名：</label>
-							<input type="text" placeholder="请输员工姓名" name="fullname" required data-rule-fullname="true" data-msg-required="员工姓名不能为空"/>
+							<input type="text" value="${staff.staffName }" placeholder="请输员工姓名" name="fullname" required data-rule-fullname="true" data-msg-required="员工姓名不能为空"/>
 						</li>
 						<li>
 							<label>手机号：</label>
-							<input type="text" placeholder="请输入手机号" name="mobile" required data-rule-mobile="true" data-msg-required="手机号不能为空"/>
+							<input type="text" value="${staff.staffPhone }" placeholder="请输入手机号" name="mobile" required data-rule-mobile="true" data-msg-required="手机号不能为空"/>
 						</li>
 						<li>
 							<label>性别：</label>
@@ -33,18 +34,20 @@
 						</li>
 						<li>
 							<label>岗位：</label>
-							<select name="post" required data-msg-required="所属岗位不能为空">
+							<select name="staffCareer" required data-msg-required="所属岗位不能为空">
 								<option value="">请选择所属岗位</option>
-								<option value="1">店长</option>
-								<option value="2">财务</option>
-								<option value="3">洗车工</option>
+								<c:forEach items="${career}" var="c">
+								
+								<option value="${c.staffCareer }" <c:if test="${staff.staffCareer==c.staffCareer}">selected=selected</c:if>>${c.staffCareer }</option>
+								</c:forEach>
 							</select>
 						</li>
 						<li>
 							<label>是否在岗：</label>
-							<select name="state">
-								<option value="1">在岗</option>
-								<option value="2">离职</option>
+							<select name="staffStatus">
+								<c:forEach items="${status}" var="s">
+								<option value="${s.staffStatus }">${s.staffStatus }</option>
+								</c:forEach>
 							</select>
 						</li>
 					</ul>
