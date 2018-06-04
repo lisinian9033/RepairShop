@@ -22,4 +22,20 @@
     from user_list
     where user_no = #{userNo,jdbcType=INTEGER}
   </select>
+  
+  <!-- 查询所有会员 -->
+  <select id="findAll" resultMap="BaseResultMap">
+     select * from user_list
+  </select>
+  
+  <!-- 查询单个会员信息 -->
+  <select id="findOne" resultMap="BaseResultMap">
+     select * from user_list where user_name=#{userName}
+  </select>
+  
+  <!-- 添加会员 -->
+  <insert id="addUser">
+  insert into user_list values(default,#{userName},#{userSex},#{userCarno},#{userPhone},#{userMileage},#{userInsurance},#{userCarbrand},#{userNote})
+  </insert>
+  
 </mapper>

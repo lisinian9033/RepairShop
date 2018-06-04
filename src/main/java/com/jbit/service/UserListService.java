@@ -1,13 +1,13 @@
-package com.jbit.dao;
+package com.jbit.service;
 
 import java.util.List;
 
+import org.apache.ibatis.annotations.Param;
+
 import com.jbit.entity.UserList;
 
-public interface UserListDao {
-    UserList selectByPrimaryKey(Integer userNo);
-    
-    /**
+public interface UserListService {
+	/**
      * 查询所有的会员
      * @return 所有的会员
      */
@@ -25,6 +25,5 @@ public interface UserListDao {
      * @param userName 会员姓名
      * @return 会员信息
      */
-    UserList findOne(String userName);
-    
+    UserList findOne(@Param("userName") String userName);
 }

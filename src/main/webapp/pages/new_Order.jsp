@@ -13,7 +13,7 @@
 			<form action="#" method="post">
 				<div class="search_box clearfix">
 					<label class="f_left">搜索会员：</label>
-					<input type="search" placeholder="请输入手机号/车牌号/姓名/卡号" class="f_left search_input"/>
+					<input type="search" placeholder="请输入姓名" class="f_left search_input"/>
 					<input type="submit" value="搜索" class="btn blue_btn"/>
 				</div>
 			</form>
