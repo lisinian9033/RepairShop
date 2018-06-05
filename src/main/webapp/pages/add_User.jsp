@@ -12,36 +12,33 @@
 		<div class="main_box">
 			<h2><span></span>会员添加</h2>
 			<div class="cont_box">
-				<form action="#" method="post" id="user_form">
+				<form action="${pageContext.request.contextPath }/addUser" method="post" id="user_form">
 					<ul class="addpro_box adduser_box">
 						<li>
 							<label>姓名：</label>
-							<input type="text" placeholder="请输入姓名" name="fullname" required data-rule-fullname="true" data-msg-required="会员姓名不能为空"/>
+							<input type="text" placeholder="请输入姓名" name="userName" required data-rule-fullname="true" data-msg-required="会员姓名不能为空"/>
 						</li>
 						<li>
 							<label>手机号：</label>
-							<input type="text" placeholder="请输入手机号" name="mobile" required data-rule-mobile="true" data-msg-required="会员手机号不能为空"/>
+							<input type="text" placeholder="请输入手机号" name="userPhone" required data-rule-mobile="true" data-msg-required="会员手机号不能为空"/>
 						</li>
 						<li>
 							<label>车牌：</label>
-							<input type="text" placeholder="请输入车牌号码" name="isCarNo" required data-rule-isCarNo="true" data-msg-required="车牌号码不能为空"/>
+							<input type="text" placeholder="请输入车牌号码" name="userCarno" required data-rule-isCarNo="true" data-msg-required="车牌号码不能为空"/>
 						</li>
 						<li>
 							<label>行驶里程：</label>
-							<input type="text" placeholder="请输入行驶里程" name="mileage" required data-rule-mileage="true" data-msg-required="行驶里程不能为空"/>
+							<input type="text" placeholder="请输入行驶里程" name="userMileage" required data-rule-mileage="true" data-msg-required="行驶里程不能为空"/>
 						</li>
 						<li>
 							<label>保险到期日：</label>
-							<input type="text" class="choose_date" placeholder="请选择保险到期日" name="chdate" readonly required data-msg-required="保险到期日不能为空"/>
+							<input type="text" class="choose_date" placeholder="请选择保险到期日" name="userInsurance" readonly required data-msg-required="保险到期日不能为空"/>
 						</li>
 						<li>
 							<label>车品牌型号：</label>
 							<div class="select_group" id="carmodel">
-								<select name="carbrand" class="carbrand" required data-msg-required="爱车品牌型号不能为空">
+								<select name="userCarbrand" class="carbrand" id="carbrand" data-msg-required="爱车品牌型号不能为空">
 									<option value="">请选择爱车品牌</option>
-								</select>
-								<select name="carmodela" class="carmodela">
-									<option value="">请选择爱车型号</option>
 								</select>
 							</div>
 						</li>

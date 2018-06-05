@@ -38,7 +38,7 @@
 								<option value="">请选择所属岗位</option>
 								<c:forEach items="${career}" var="c">
 								
-								<option value="${c.staffCareer }" <c:if test="${staff.staffCareer==c.staffCareer}">selected=selected</c:if>>${c.staffCareer }</option>
+								<option value="${c.staffCareer }" <c:if test="${staff.staffCareer==c.staffCareer}">selected="selected"</c:if>>${c.staffCareer }</option>
 								</c:forEach>
 							</select>
 						</li>
