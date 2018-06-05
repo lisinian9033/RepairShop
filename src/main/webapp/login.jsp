@@ -1,19 +1,15 @@
-<%@ page language="java" contentType="text/html; charset=UTF-8"
-	pageEncoding="UTF-8"%>
-<%
-	String path = request.getContextPath();
-	String basePath = request.getScheme() + "://"
-			+ request.getServerName() + ":" + request.getServerPort()
-			+ path + "/";
-%>
-
+<%@ page language="java" import="java.util.*" pageEncoding="UTF-8"%>
 <!DOCTYPE html>
 <html>
-<head lang="en">
-<meta charset="UTF-8">
+<head>
+	<meta charset="utf-8">
+<meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
 <title>后台登录 - 汽车服务商店系统</title>
+<style type="text/css">
+
+</style>
 <script src="${pageContext.request.contextPath }/js/jquery-2.2.1.min.js"></script>
-<script src="${pageContext.request.contextPath }/js/index.js"></script>
 <link type="text/css" rel="stylesheet" href="${pageContext.request.contextPath }/css/login.css" />
 <script type="text/javascript">
 $(function(){
@@ -23,14 +19,10 @@ $(function(){
 	});
 
 	$("#loginBtn").click(function(){
-		alert(1);
 		var path=$("#path").val();
-		alert(path);
 		var user = new Object();
 		user.loginname = $.trim($("#loginname").val());
 		user.password = $.trim($("#password").val());
-		alert(user.loginname);
-		alert(user.password);
 		if(user.loginname == "" || user.loginname == null){
 			$("#loginname").focus();
 		 	$("#formtip").css("color","red");
@@ -52,7 +44,6 @@ $(function(){
 						window.location.href=path+'/pages/index.jsp';
 					}else{
 						$("#formtip").css("color","red");
-						
 						$("#loginname").val('');
 						$("#password").val('');
 						$("#formtip").html("登陆失败！请重试。");
@@ -84,7 +75,7 @@ $(function(){
 				</div>
 				<ul id="formtip"></ul>
 				<div class="subBtn">
-					<input type="submit" id="loginBtn" value="登录" /> 
+					<input type="button" id="loginBtn" value="登录" /> 
 					<input type="reset" id="resetBtn" value="重置" />
 				</div>
 			</form>

@@ -20,7 +20,6 @@ public class RepairAdminController {
 	@RequestMapping(value="/AdminLogin",method=RequestMethod.POST)
 	@ResponseBody
 	public JsonResult AuUserLogin(RepairAdmin user,HttpSession session){
-		System.out.println("进入控制类");
 		System.out.println(user);
 		JsonResult result = new JsonResult("登录失败！！");
 		RepairAdmin au= repairAdminService.login(user);
