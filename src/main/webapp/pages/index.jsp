@@ -120,7 +120,7 @@
 		<!--会员管理-->
 		<li>
 			<i class="menu_icon fa fa-user"></i>
-			<a href="javascript:void(0);" data-id="user" data-href="${pageContext.request.contextPath }/pages/user_List.jsp">本店会员</a>
+			<a href="javascript:void(0);" data-id="user" data-href="${pageContext.request.contextPath }/userList">本店会员</a>
 		</li>
 		<li>
 			<i class="menu_icon fa fa-user-plus"></i>

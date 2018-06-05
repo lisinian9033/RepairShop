@@ -8,7 +8,7 @@
     <result column="user_carno" jdbcType="VARCHAR" property="userCarno" />
     <result column="user_phone" jdbcType="VARCHAR" property="userPhone" />
     <result column="user_mileage" jdbcType="VARCHAR" property="userMileage" />
-    <result column="user_Insurance" jdbcType="VARCHAR" property="userInsurance" />
+    <result column="user_Insurance" jdbcType="DATE" property="userInsurance" />
     <result column="user_carbrand" jdbcType="VARCHAR" property="userCarbrand" />
     <result column="user_note" jdbcType="VARCHAR" property="userNote" />
   </resultMap>

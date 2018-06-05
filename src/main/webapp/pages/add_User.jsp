@@ -37,17 +37,11 @@
 						<li>
 							<label>车品牌型号：</label>
 							<div class="select_group" id="carmodel">
-								<select name="carbrand" class="carbrand" required data-msg-required="车品牌型号不能为空">
-									<option value="">请选择</option>
+								<select name="carbrand" class="carbrand" required data-msg-required="爱车品牌型号不能为空">
+									<option value="">请选择爱车品牌</option>
 								</select>
 								<select name="carmodela" class="carmodela">
-									<option value="">请选择</option>
-								</select>
-								<select name="carmodelb" class="carmodelb">
-									<option value="">请选择</option>
-								</select>
-								<select name="carmodelc" class="carmodelc">
-									<option value="">请选择</option>
+									<option value="">请选择爱车型号</option>
 								</select>
 							</div>
 						</li>

@@ -1,5 +1,7 @@
 package com.jbit.entity;
 
+import java.util.Date;
+
 public class UserList {
     private Integer userNo;
 
@@ -13,7 +15,7 @@ public class UserList {
 
     private String userMileage;
 
-    private String userInsurance;
+    private Date userInsurance;
 
     private String userCarbrand;
 
@@ -67,15 +69,15 @@ public class UserList {
         this.userMileage = userMileage == null ? null : userMileage.trim();
     }
 
-    public String getUserInsurance() {
-        return userInsurance;
-    }
+    public Date getUserInsurance() {
+		return userInsurance;
+	}
 
-    public void setUserInsurance(String userInsurance) {
-        this.userInsurance = userInsurance == null ? null : userInsurance.trim();
-    }
+	public void setUserInsurance(Date userInsurance) {
+		this.userInsurance = userInsurance;
+	}
 
-    public String getUserCarbrand() {
+	public String getUserCarbrand() {
         return userCarbrand;
     }
 

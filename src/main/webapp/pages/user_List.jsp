@@ -1,4 +1,6 @@
 <%@ page language="java" import="java.util.*" pageEncoding="UTF-8"%>
+<%@taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
+<%@taglib prefix="fm" uri="http://java.sun.com/jsp/jstl/fmt" %>
 <!DOCTYPE html>
 <html>
 <head>
@@ -18,23 +20,24 @@
 						<th>姓名</th>
 						<th>性别</th>
 						<th>车牌号</th>
-						<th>储值卡</th>
-						<th>年卡总数</th>
-						<th>大礼包总数</th>
-						<th>订单总数</th>
+						<th>公里数</th>
+						<th>保险到期日期</th>
+						<th>爱车品牌</th>
+						<th>备注</th>
 						<th width="268">操作</th>
 					</tr>
 				</thead>
 				<tbody>
+				<c:forEach items="${userList }" var="u">
 					<tr id="1"><!--此处id为进行查看该会员相关信息时，当前数据的唯一标识-->
-						<td>17656984521</td>
-						<td>张三</td>
-						<td>男</td>
-						<td>5</td>
-						<td>1</td>
-						<td>1</td>
-						<td>3</td>
-						<td>10</td>
+						<td>${u.userPhone }</td>
+						<td>${u.userName }</td>
+						<td>${u.userSex }</td>
+						<td>${u.userCarno }</td>
+						<td>${u.userMileage }</td>
+						<td><fm:formatDate value="${u.userInsurance }" pattern="yyyy-MM-dd"/></td>
+						<td>${u.userCarbrand }</td>
+						<td>${u.userNote }</td>
 						<td>
 							<a href="javascript:void(0);" class="table_btn table_edit see_order">
 								<i class="fa fa-eye"></i>
@@ -46,27 +49,8 @@
 							</a>
 						</td>
 					</tr>
-					<tr id="2"><!--此处id为进行查看该会员相关信息时，当前数据的唯一标识-->
-						<td>13686563245</td>
-						<td>王五</td>
-						<td>女</td>
-						<td>1</td>
-						<td>0</td>
-						<td>1</td>
-						<td>3</td>
-						<td>2</td>
-						<td>
-							<a href="javascript:void(0);" class="table_btn table_edit see_order">
-								<i class="fa fa-eye"></i>
-								<span>查看订单</span>
-							</a>
-							<a href="javascript:void(0);" class="table_btn table_info edit_btn">
-								<i class="fa fa-eye"></i>
-								<span>查看详情</span>
-							</a>
-						</td>
-					</tr>
-				</tbody>
+					</c:forEach>
+					</tbody>
 			</table>
 		</div>
 		</div>
