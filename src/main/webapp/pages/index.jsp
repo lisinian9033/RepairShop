@@ -19,10 +19,6 @@
 				<p data-fast="new_order">开 单</p>
 			</li>
 			<li>
-				<i class="fa fa-user-plus font_lager"></i>
-				<p data-fast="add_user">添加会员</p>
-			</li>
-			<li>
 				<i class="fa fa-file-text font_lager"></i>
 				<p data-id="order">订单管理</p>
 			</li>
