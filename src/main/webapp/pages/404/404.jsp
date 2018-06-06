@@ -34,10 +34,10 @@
 						火星不太安全，我可以免费送你回地球
 					</p>
 				</div>
-				<a href="pages/login.jsp" title="返回超时登录页面">
+				<a href="${pageContext.request.contextPath }/login.jsp" title="返回超时登录页面">
 					<div class="link" id="home"></div>
 				</a>
-				<a href="pages/login.jsp" title="联系管理员">
+				<a href="${pageContext.request.contextPath }/login.jsp" title="联系管理员">
 					<div class="link" id="contact"></div>
 
 				</a>
