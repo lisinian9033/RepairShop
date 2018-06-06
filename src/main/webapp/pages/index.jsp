@@ -70,7 +70,7 @@
 	</div>
 	<ul class="login_msg">
 		<li title="武汉中山公园分店">中山公园分店</li>
-		<li><a href="javascript:void(0);">退出</a></li>
+		<li><a href="${pageContext.request.contextPath }/logout">退出</a></li>
 	</ul>
 </div>
 <!--top end-->

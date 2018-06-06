@@ -30,4 +30,13 @@ public class RepairAdminController {
 		}
 		return result;
 	}
+	
+	/**
+	 * 退出
+	 */
+	@RequestMapping(value = "/logout", method = RequestMethod.GET)
+	public String backendlogout(HttpSession session) {
+		session.invalidate();// 消除session
+		return "login";
+	}
 }

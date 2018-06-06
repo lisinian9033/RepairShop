@@ -13,7 +13,6 @@
 <meta charset="UTF-8">
 <title>后台登录 - 汽车服务商店系统</title>
 <script src="${pageContext.request.contextPath }/js/jquery-2.2.1.min.js"></script>
-<script src="${pageContext.request.contextPath }/js/index.js"></script>
 <link type="text/css" rel="stylesheet" href="${pageContext.request.contextPath }/css/login.css" />
 <script type="text/javascript">
 $(function(){
