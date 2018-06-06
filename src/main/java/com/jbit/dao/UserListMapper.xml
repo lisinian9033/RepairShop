@@ -38,4 +38,9 @@
   insert into user_list values(default,#{userName},#{userSex},#{userCarno},#{userPhone},#{userMileage},#{userInsurance},#{userCarbrand},#{userNote})
   </insert>
   
+  <!--删除会员  -->
+  <delete id="delUser">
+  delete from user_list where user_no=#{userNo}
+  </delete>
+  
 </mapper>

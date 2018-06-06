@@ -50,7 +50,7 @@
 							<div class="select_group" id="carmodel">
 								<select name="userCarbrand" class="carbrand" id="carbrand" data-msg-required="爱车品牌型号不能为空">
 									<option value="">请选择爱车品牌</option>
-									<option value="奔驰">奔驰</option>
+									<option value="奔驰" selected="selected">奔驰</option>
 									<option value="宝马">宝马</option>
 									<option value="大众">大众</option>
 									<option value="丰田">丰田</option>
@@ -84,9 +84,9 @@
 		<script src="${pageContext.request.contextPath }/js/other.js"></script>
 		<script>
 			$(function(){
-				$("body").other({formId:"#user_form",formUrl:"#",linkHref:""});//formUrl 表单请求地址,linkHref 请求成功后跳转地址，可不填
+				$("body").other({formId:"#user_form",formUrl:"",linkHref:""});//formUrl 表单请求地址,linkHref 请求成功后跳转地址，可不填
 				$("#carmodel").cxSelect({
-					url: "",//${pageContext.request.contextPath }/js/carModel.json
+					url: "",//${pageContext.request.contextPath }/js/carModel.json//品牌车型号
 					selects: ["carbrand", "carmodela", "carmodelb", "carmodelc"],
 					emptyStyle: "none"
 				});

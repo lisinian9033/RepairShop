@@ -27,4 +27,9 @@ public interface UserListDao {
      */
     UserList findOne(String userName);
     
+    /**
+     * 删除会员
+     */
+    int delUser(Integer userNo);
+    
 }

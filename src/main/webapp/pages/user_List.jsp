@@ -47,6 +47,10 @@
 								<i class="fa fa-eye"></i>
 								<span>查看详情</span>
 							</a>
+							<a  class="table_btn table_del del_btn delUser" userNo=${u.userNo } userName=${u.userName } data-toggle="tooltip" data-placement="top" data-original-title="删除员工基本信息">
+								<i class=""></i>
+								<span>删除</span>
+							</a>
 						</td>
 					</tr>
 					</c:forEach>
@@ -63,7 +67,6 @@
 		<script>
 			$(function(){
 				$("body").other({tableId:"#table_box",tableWrap:[1,2,8],tableAas:[ 0,"desc"],tableSearch:true});
-				$("body").tipWindow({method:"delete",Class:".del_btn",even:"click",Twidth:"400",Theight:"180",delUrl:"#"});//delUrl 删除请求地址
 				$("body").tipWindow({method:"edit",type:"form",Class:".edit_btn",even:"click",tipTit:"会员详情",Twidth:"1200",Theight:"800",editUrl:"${pageContext.request.contextPath }/pages/user_Detail.jsp"});//editUrl 编辑请求地址
 				//查看当前会员的订单
 				$(".see_order").click(function(){

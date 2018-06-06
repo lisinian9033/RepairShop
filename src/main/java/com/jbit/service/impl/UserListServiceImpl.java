@@ -31,4 +31,9 @@ public class UserListServiceImpl implements UserListService {
 		return userListDao.findOne(userName);
 	}
 
+	@Override
+	public int delUser(Integer userNo) {
+		return userListDao.delUser(userNo);
+	}
+
 }

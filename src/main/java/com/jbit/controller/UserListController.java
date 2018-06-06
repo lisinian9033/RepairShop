@@ -8,7 +8,9 @@ import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
+import org.springframework.web.bind.annotation.ResponseBody;
 
+import com.jbit.entity.JsonResult;
 import com.jbit.entity.UserList;
 import com.jbit.service.UserListService;
 
@@ -42,4 +44,20 @@ public class UserListController {
 		}
 		return "pages/add_User";
 	}
+	
+	/**
+	 * 删除会员
+	 * @return JsonResult
+	 */
+	@RequestMapping(value="delUser")
+	@ResponseBody
+	public JsonResult delUser(Integer userNo){
+		JsonResult result=new JsonResult("删除失败！！");
+		int res=userListService.delUser(userNo);
+		if(res!=0){
+			result=new JsonResult(true,"删除成功！！");
+		}
+		return result;
+	}
+	
 }

@@ -26,4 +26,9 @@ public interface UserListService {
      * @return 会员信息
      */
     UserList findOne(@Param("userName") String userName);
+    
+    /**
+     * 删除会员
+     */
+    int delUser(@Param("userNo") Integer userNo);
 }
