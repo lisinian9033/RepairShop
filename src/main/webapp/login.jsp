@@ -23,14 +23,10 @@ $(function(){
 	});
 
 	$("#loginBtn").click(function(){
-		alert(1);
 		var path=$("#path").val();
-		alert(path);
 		var user = new Object();
 		user.loginname = $.trim($("#loginname").val());
 		user.password = $.trim($("#password").val());
-		alert(user.loginname);
-		alert(user.password);
 		if(user.loginname == "" || user.loginname == null){
 			$("#loginname").focus();
 		 	$("#formtip").css("color","red");

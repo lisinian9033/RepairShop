@@ -4,7 +4,6 @@ import java.util.List;
 
 import javax.annotation.Resource;
 
-import org.junit.runner.Request;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -37,6 +36,8 @@ public class UserListController {
 	public String toAddUser(UserList userList,Model model){
 		int res=userListService.addUser(userList);
 		if(res>0){
+			List<UserList> list=userListService.findAll();
+			model.addAttribute("userList", list);
 			return "pages/user_List";//添加成功返回用户列表
 		}
 		return "pages/add_User";

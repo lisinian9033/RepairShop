@@ -23,6 +23,17 @@
 							<input type="text" placeholder="请输入手机号" name="userPhone" required data-rule-mobile="true" data-msg-required="会员手机号不能为空"/>
 						</li>
 						<li>
+							<label>性别：</label>
+							<div class="radio_box">
+								<i class="fa fa-circle-thin fa-1x"></i>
+								<input type="radio" name="userSex" class="input_radio" value="男" required data-msg-required="性别不能为空"/><span>男</span>
+							</div>
+							<div class="radio_box">
+								<i class="fa fa-circle-thin fa-1x"></i>
+								<input type="radio" name="userSex" class="input_radio" value="女"/><span>女</span>
+							</div>
+						</li>
+						<li>
 							<label>车牌：</label>
 							<input type="text" placeholder="请输入车牌号码" name="userCarno" required data-rule-isCarNo="true" data-msg-required="车牌号码不能为空"/>
 						</li>
@@ -39,12 +50,22 @@
 							<div class="select_group" id="carmodel">
 								<select name="userCarbrand" class="carbrand" id="carbrand" data-msg-required="爱车品牌型号不能为空">
 									<option value="">请选择爱车品牌</option>
+									<option value="奔驰">奔驰</option>
+									<option value="宝马">宝马</option>
+									<option value="大众">大众</option>
+									<option value="丰田">丰田</option>
+									<option value="兰博基尼">兰博基尼</option>
+									<option value="劳斯莱斯">劳斯莱斯</option>
+									<option value="东风">东风</option>
+									<option value="长安">长安</option>
+									<option value="Jeep">Jeep</option>
+									<option value="奥拓">奥拓</option>
 								</select>
 							</div>
 						</li>
 						<li>
 							<label>备注：</label>
-							<textarea rows="3" name="detail"></textarea>
+							<textarea rows="3" name="userNote"></textarea>
 						</li>
 					</ul>
 					<div class="probtn_box clearfix">
@@ -65,7 +86,7 @@
 			$(function(){
 				$("body").other({formId:"#user_form",formUrl:"#",linkHref:""});//formUrl 表单请求地址,linkHref 请求成功后跳转地址，可不填
 				$("#carmodel").cxSelect({
-					url: "js/carModel.json",
+					url: "",//${pageContext.request.contextPath }/js/carModel.json
 					selects: ["carbrand", "carmodela", "carmodelb", "carmodelc"],
 					emptyStyle: "none"
 				});

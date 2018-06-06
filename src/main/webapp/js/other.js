@@ -314,12 +314,12 @@
 		return this.optional(element) || (name.test(value));
 	},"请输入正确的身份证号");
 	//手机验证规则 
-	jQuery.validator.addMethod("mobile", function (value, element) {
-		var mobile = /^1[3|4|5|7|8]\d{9}$/;
+	jQuery.validator.addMethod("userPhone", function (value, element) {      alert(1)
+		var mobile = /^((13[0-9])|(14[5|7])|(15([0-3]|[5-9]))|(18[0,5-9]))\\d{8}$/;
 		return this.optional(element) || (mobile.test(value));
 	}, "请输入正确的手机号码");
 	//姓名
-	jQuery.validator.addMethod("fullname", function (value, element) {
+	jQuery.validator.addMethod("userName", function (value, element) {
 		var name = /^([\u4E00-\u9FA5]+|[a-zA-Z]+){2,}$/;
 		return this.optional(element) || (name.test(value));
 	}, "请输入真实姓名");
@@ -329,12 +329,12 @@
 		return this.optional(element) || (name.test(value));
 	}, "请输入正确的邮箱地址");
 	//两位小数
-	jQuery.validator.addMethod("mileage", function (value, element) {
+	jQuery.validator.addMethod("userMileage", function (value, element) {
 		var name = /^[0-9]+([.]{1}[0-9]{1,2})?$/;
 		return this.optional(element) || (name.test(value));
 	}, "请输入正确的里程数，例如：1.23");
 	//车牌号
-	jQuery.validator.addMethod("isCarNo", function (value, element) {
+	jQuery.validator.addMethod("userCarno", function (value, element) {       alert(0)
 		var name = /^[\u4e00-\u9fa5]{1}[A-Z]{1}[A-Z_0-9]{4}[A-Z_0-9_\u4e00-\u9fa5]$|^[A-Z]{2}\d{7}$/;
 		return this.optional(element) || (name.test(value));
 	}, "请输入正确的车牌号码，字母大写");
