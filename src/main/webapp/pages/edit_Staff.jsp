@@ -11,9 +11,10 @@
 	<body>
 		<div class="main_box">
 			<div class="cont_box editpro_box">
-				<form action="#" method="post" id="addstaff_form">
+				<form action="${pageContext.request.contextPath }/updaStatus" method="post" id="addstaff_form">
 					<ul class="addpro_box">
 						<li>
+					        <input type="hidden" name="staffNo" value="${staff.staffNo}"/>
 							<label>姓名：</label>
 							<input type="text" value="${staff.staffName }" placeholder="请输员工姓名" name="staffName" required data-rule-fullname="true" data-msg-required="员工姓名不能为空"/>
 						</li>
@@ -24,12 +25,12 @@
 						<li>
 							<label>性别：</label>
 							<div class="radio_box">
-								<i class="fa fa-circle-thin fa-1x"></i>
-								<input type="radio" name="staffSex" class="input_radio" required data-msg-required="性别不能为空" value="男" <c:if test="${staff.staffSex eq '男' }">checked</c:if> /><span>男</span>
+								<i class="fa fa-1x ${staff.staffSex=='男'?'fa-check-circle':'fa-circle-thin'}"></i>
+								<input type="radio" name="staffSex" class="input_radio" value="男"><span>男</span>
 							</div>
 							<div class="radio_box">
-								<i class="fa fa-circle-thin fa-1x"></i>
-								<input type="radio" name="staffSex" class="input_radio" value="女" ${staff.staffSex=='女'?'checked=checked':''}/><span>女</span>
+								<i class="fa ${staff.staffSex=='女'?'fa-check-circle':'fa-circle-thin'} fa-1x"></i>
+								<input type="radio" name="staffSex" class="input_radio" value="女" /><span>女</span>
 							</div>
 						</li>
 						<li>
@@ -55,6 +56,7 @@
 						<input type="submit" value="确认保存" class="btn blue_btn"/>
 						<input type="button" value="返回" class="btn blue_btn right_btn"/>
 					</div>
+					<div class="info" >${msg }</div>
 				</form>
 			</div>
 		</div>

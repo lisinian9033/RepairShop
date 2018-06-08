@@ -49,7 +49,7 @@ public class StaffListController {
 			//添加成功
 			return "redirect:/staffList";
 		}
-		return "pages/add_Staff.jsp";
+		return "redirect:/toAddStaff";
 	}
 	
 	/**
@@ -59,13 +59,25 @@ public class StaffListController {
 	@ResponseBody
 	public JsonResult delStaff(int staffNo){
 		JsonResult result = new JsonResult("删除失败！！");
-		int res=staffListService.delapp(staffNo);
+		int res=staffListService.delStaff(staffNo);
 		if(res!=0){
 			//删除成功
 			result = new JsonResult(true,"删除成功！！");
 		}
 		return result;
 	
+	}
+	/**
+	 *通过员工ID更新员工信息
+	 */
+	@RequestMapping(value = "updaStatus",method=RequestMethod.POST)
+	public String updaStatus(StaffList staffList,Model model){
+		int res=staffListService.updateStaff(staffList);
+		if(res>0){
+			return "redirect:/staffList";
+		}
+		model.addAttribute("msg","更新失败！！请联系管理员..." );
+		return "redirect:/selectByStatusNo?staffNo=staffList.getStaffNo()";
 	}
 	/**
 	 *通过状态查询员工信息

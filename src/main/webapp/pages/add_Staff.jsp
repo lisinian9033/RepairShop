@@ -25,7 +25,7 @@
 						<li>
 							<label>性别：</label>
 							<div class="radio_box">
-								<i class="fa fa-circle-thin fa-1x"></i>
+								<i class="fa fa-check-circle fa-1x"></i>
 								<input type="radio" name="staffSex" class="input_radio" value="男" required data-msg-required="性别不能为空"/><span>男</span>
 							</div>
 							<div class="radio_box">

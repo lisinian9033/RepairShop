@@ -52,8 +52,29 @@
   </insert>
   
   <!--删除员工  -->
-  <delete id="delapp">
+  <delete id="delStaff">
   delete from staff_list where staff_no=#{staffNo}
   </delete>
   
+  <update id="updateStaff">
+  update staff_list 
+  <set>
+  <if test="staffName!=''">
+  staff_name=#{staffName}
+  </if>
+  <if test="staffSex!=''">
+  , staff_sex=#{staffSex}
+  </if>
+  <if test="staffCareer!=''">
+  , staff_career=#{staffCareer}
+  </if>
+  <if test="staffPhone!=''">
+  , staff_phone=#{staffPhone}
+  </if>
+  <if test="staffStatus!=''">
+  , staff_status=#{staffStatus}
+  </if>
+  </set>
+  where staff_no=#{staffNo}
+  </update>
 </mapper>

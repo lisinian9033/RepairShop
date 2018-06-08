@@ -27,8 +27,8 @@ public class StaffListServiceImpl implements StaffListService {
 	}
 
 	@Override
-	public int delapp(int staffNo) {
-		return staffListDao.delapp(staffNo);
+	public int delStaff(int staffNo) {
+		return staffListDao.delStaff(staffNo);
 	}
 
 	@Override
@@ -49,6 +49,11 @@ public class StaffListServiceImpl implements StaffListService {
 	@Override
 	public StaffList getStaffByNo(Integer staffNo) {
 		return staffListDao.getStaffByNo(staffNo);
+	}
+
+	@Override
+	public int updateStaff(StaffList staffList) {
+		return staffListDao.updateStaff(staffList);
 	}
 
 }

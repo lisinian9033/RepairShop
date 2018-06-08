@@ -24,7 +24,11 @@ public interface StaffListService {
     /**
    	 * 删除员工
    	 */
-    int delapp(int staffNo);
+    int delStaff(int staffNo);
+    /**
+     * 更新员工
+     */
+    int updateStaff(StaffList staffList);
     /**
      * 查询所有员工状态
      */
