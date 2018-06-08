@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.jbit.dao.ExpensesRecordDao">
+  <resultMap id="BaseResultMap" type="com.jbit.entity.ExpensesRecord">
+    <id column="erno" jdbcType="INTEGER" property="erno" />
+    <result column="expenses_no" jdbcType="INTEGER" property="expensesNo" />
+    <result column="expenses_recordstatus" jdbcType="INTEGER" property="expensesRecordstatus" />
+    <result column="expenses_recordnum" jdbcType="INTEGER" property="expensesRecordnum" />
+    <result column="expenses_recordtime" jdbcType="DATE" property="expensesRecordtime" />
+    <result column="expenses_name" jdbcType="VARCHAR" property="expensesName" />
+  </resultMap>
+  <sql id="Base_Column_List">
+    erno, expenses_no, expenses_recordstatus, expenses_recordnum, expenses_recordtime, expenses_name
+  </sql>
+  <select id="selectByPrimaryKey" parameterType="java.lang.Integer" resultMap="BaseResultMap">
+    select 
+    <include refid="Base_Column_List" />
+    from expenses_record
+    where erno	 = #{erno,jdbcType=INTEGER}
+  </select>
+  
+  <select id="getExpensesRecordlist" resultMap="BaseResultMap">
+  SELECT l.`expenses_name`,r.`expenses_recordstatus`,r.`expenses_recordnum`,r.`expenses_recordtime` FROM `expenses_record` r INNER JOIN `expenses_list` l ON r.`expenses_no`=l.`expenses_no` 
+  </select>
+</mapper>

@@ -98,7 +98,7 @@
 		<!--消耗管理-->
 		<li>
 			<i class="menu_icon fa fa-history"></i>
-			<a href="javascript:void(0);" data-id="expenses" data-href="${pageContext.request.contextPath }/pages/expenses_Record.jsp">出入库记录</a>
+			<a href="javascript:void(0);" data-id="expenses" data-href="${pageContext.request.contextPath }/getExpensesRecordlist">出入库记录</a>
 		</li>
 		<li>
 			<i class="menu_icon fa fa-hourglass-half"></i>
