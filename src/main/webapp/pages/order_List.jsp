@@ -1,4 +1,6 @@
 <%@ page language="java" import="java.util.*" pageEncoding="UTF-8"%>
+<%@taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
+<%@taglib prefix="fm" uri="http://java.sun.com/jsp/jstl/fmt" %>
 <!DOCTYPE html>
 <html>
 <head>
@@ -43,16 +45,17 @@
 					</tr>
 				</thead>
 				<tbody>
+				<c:forEach items="${ol }" var="ol">
 					<tr id="1"><!--此处id为进行编辑或删除时该条数据的唯一标识-->
-						<td>10000563</td>
-						<td>100.00</td>
-						<td>会员</td>
-						<td>张三</td>
-						<td>18696532635</td>
-						<td>已支付</td>
-						<td>2017-03-21</td>
+						<td>${ol.orderNo }</td>
+						<td>${ol.orderPrice }</td>
+						<td>${ol.orderPaytype }</td>
+						<td>${ol.orderUser }</td>
+						<td>${ol.orderPhone }</td>
+						<td>${ol.orderStatus }</td>
+						<td><fm:formatDate value="${ol.orderTime }" pattern="yyyy-MM-dd"/></td>
 						<td width="200">
-							<div class="order_remark">备注一下</div>
+							<div class="order_remark">${ol.orderNote }</div>
 						</td>
 						<td>
 							<a href="javascript:void(0);" class="table_btn table_info detail_btn">
@@ -69,31 +72,8 @@
 							</a>
 						</td>
 					</tr>
-					<tr id="2"><!--此处id为进行编辑或删除时该条数据的唯一标识-->
-						<td>10000563</td>
-						<td>100.00</td>
-						<td>会员</td>
-						<td>李四</td>
-						<td>18696532635</td>
-						<td>已退单</td>
-						<td>2017-03-21</td>
-						<td>备注一下</td>
-						<td>
-							<a href="javascript:void(0);" class="table_btn table_info detail_btn">
-								<i class="fa fa-eye"></i>
-								<span>订单详情</span>
-							</a>
-							<a href="javascript:void(0);" class="table_btn table_edit edit_btn">
-								<i class="fa fa-edit"></i>
-								<span>编辑订单</span>
-							</a>
-							<a href="javascript:void(0);" class="table_btn table_del del_btn">
-								<i class="fa fa-recycle"></i>
-								<span>退单</span>
-							</a>
-						</td>
-					</tr>
-				</tbody>
+					</c:forEach>
+					</tbody>
 			</table>
 		</div>
 		</div>

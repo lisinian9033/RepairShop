@@ -129,7 +129,7 @@
 		<!--订单管理-->
 		<li>
 			<i class="menu_icon fa fa-file-text-o"></i>
-			<a href="javascript:void(0);" data-id="order" data-href="${pageContext.request.contextPath }/pages/order_List.jsp">订单列表</a>
+			<a href="javascript:void(0);" data-id="order" data-href="${pageContext.request.contextPath }/OrList">订单列表</a>
 		</li>
 		<li>
 			<i class="menu_icon fa fa-clipboard"></i>

@@ -380,3 +380,4 @@ input.valid,textarea.valid,select.valid{border-color:#7edc7f;background-color:#d
 .order_paybox li:hover{background-color:#efefef;}
 .order_paybox cite{margin-right:8px;}
 .order_paybox div.error{padding:0;}
+.right_btn{margin-left: 20px}

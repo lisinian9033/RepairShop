@@ -7,7 +7,7 @@
     <result column="order_paytype" jdbcType="VARCHAR" property="orderPaytype" />
     <result column="order_user" jdbcType="VARCHAR" property="orderUser" />
     <result column="order_phone" jdbcType="VARCHAR" property="orderPhone" />
-    <result column="order_status" jdbcType="INTEGER" property="orderStatus" />
+    <result column="order_status" jdbcType="VARCHAR" property="orderStatus" />
     <result column="order_time" jdbcType="DATE" property="orderTime" />
     <result column="order_note" jdbcType="VARCHAR" property="orderNote" />
   </resultMap>

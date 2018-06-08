@@ -13,7 +13,7 @@ public class OrderList {
 
     private String orderPhone;
 
-    private Integer orderStatus;
+    private String orderStatus;
 
     private Date orderTime;
 
@@ -59,11 +59,11 @@ public class OrderList {
         this.orderPhone = orderPhone == null ? null : orderPhone.trim();
     }
 
-    public Integer getOrderStatus() {
+    public String getOrderStatus() {
         return orderStatus;
     }
 
-    public void setOrderStatus(Integer orderStatus) {
+    public void setOrderStatus(String orderStatus) {
         this.orderStatus = orderStatus;
     }
 

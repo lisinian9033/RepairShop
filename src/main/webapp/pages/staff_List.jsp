@@ -46,7 +46,7 @@
 							<td><fm:formatDate value="${list.staffEntrytime  }" pattern="yyyy-MM-dd"/></td>
 							<td>${list.staffStatus }</td>
 							<td>
-								<a href="javascript:void(0);" class="table_btn table_edit edit_btn" staffNo=${list.staffNo }>
+								<a href="${pageContext.request.contextPath }/selectByStatusNo?staffNo=${list.staffNo }" class="table_btn table_edit edit_btn" staffNo=${list.staffNo }>
 									<i class="fa fa-edit"></i>
 									<span>编辑</span>
 								</a>
@@ -73,7 +73,7 @@
 							<td><fm:formatDate value="${s.staffEntrytime  }" pattern="yyyy-MM-dd"/></td>
 							<td>${s.staffStatus }</td>
 							<td>
-								<a href="javascript:void(0);" class="table_btn table_edit edit_btn" staffNo=${s.staffNo }>
+								<a href="${pageContext.request.contextPath }/selectByStatusNo" class="table_btn table_edit edit_btn" staffNo=${s.staffNo }>
 									<i class="fa fa-edit"></i>
 									<span>编辑</span>
 								</a>
@@ -104,7 +104,7 @@
 		<script>
 			$(function(){
 				$("body").other({tableId:"#table_box",tableWrap:[1,7],tableAas:[ 0,"desc"],tableSearch:true});
-				$("body").tipWindow({method:"edit",type:"form",Class:".edit_btn",even:"click",tipTit:"编辑员工信息",Twidth:"700",Theight:"460",editUrl:"${pageContext.request.contextPath }/selectByStatusNo"});//editUrl 编辑员工信息请求地址
+				//$("body").tipWindow({method:"edit",type:"form",Class:".edit_btn",even:"click",tipTit:"编辑员工信息",Twidth:"700",Theight:"460",editUrl:"${pageContext.request.contextPath }/selectByStatusNo"});//editUrl 编辑员工信息请求地址
 				$("body").tipWindow({method:"edit",type:"form",Class:".see_btn",even:"click",tipTit:"员工业绩",Twidth:"998",Theight:"600",editUrl:"${pageContext.request.contextPath }/pages/staff_Achievement.jsp"});//editUrl 员工业绩请求地址
 				//员工筛选
 				
