@@ -22,8 +22,11 @@
     where order_no = #{orderNo,jdbcType=INTEGER}
   </select>
   
-  <select id="getAllOrder" resultMap="BaseResultMap">
-   select * from order_list
+  <select id="getAllOrder" parameterType="java.lang.String" resultMap="BaseResultMap">
+   select * from order_list where 1=1
+     <if test="_parameter!=null">
+      and order_user=#{orderUser}
+     </if>
   </select>
   
   <select id="getOneOrder" resultMap="BaseResultMap">

@@ -17,8 +17,8 @@ public class OrderListServiceImpl implements OrderListService {
 	private OrderListDao orderListDao;
 	
 	@Override
-	public List<OrderList> getAllOrder() {
-		return orderListDao.getAllOrder();
+	public List<OrderList> getAllOrder(String orderUser) {
+		return orderListDao.getAllOrder(orderUser);
 	}
 
 	@Override

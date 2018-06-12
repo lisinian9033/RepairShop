@@ -18,9 +18,16 @@ public class OrderListController {
 	private OrderListService orderListService;
 	
 	@RequestMapping(value="OrList")
-	public String OrList(Model model){
-		List<OrderList> ol=orderListService.getAllOrder();
+	public String OrList(Model model,String orderUser) throws Exception{
+		String user = null;
+		if(orderUser!=null){
+			 user=new String(orderUser.getBytes("ISO-8859-1"),"UTF-8");
+		}
+		List<OrderList> ol=orderListService.getAllOrder(user);
 		model.addAttribute("ol", ol);
+		if(ol.isEmpty()){
+			model.addAttribute("msg", "没有相关数据...");
+		}
 		return "pages/order_List";
 	}
 }

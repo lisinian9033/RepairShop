@@ -12,7 +12,7 @@ public interface OrderListService {
      *查询所有订单 
      * @return 所有订单
      */
-    List<OrderList> getAllOrder();
+    List<OrderList> getAllOrder(@Param("orderUser") String orderUser);
     
     /**
      * 查询指定订单

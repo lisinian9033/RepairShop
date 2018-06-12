@@ -39,7 +39,7 @@
 						<td>${u.userCarbrand }</td>
 						<td>${u.userNote }</td>
 						<td>
-							<a href="javascript:void(0);" class="table_btn table_edit see_order">
+							<a href="${pageContext.request.contextPath }/OrList?orderUser=${u.userName }" class="table_btn table_edit see_order" >
 								<i class="fa fa-eye"></i>
 								<span>查看订单</span>
 							</a>
@@ -69,19 +69,19 @@
 				$("body").other({tableId:"#table_box",tableWrap:[1,2,8],tableAas:[ 0,"desc"],tableSearch:true});
 				$("body").tipWindow({method:"edit",type:"form",Class:".edit_btn",even:"click",tipTit:"会员详情",Twidth:"1200",Theight:"800",editUrl:"${pageContext.request.contextPath }/pages/user_Detail.jsp"});//editUrl 编辑请求地址
 				//查看当前会员的订单
-				$(".see_order").click(function(){
-					var Wparent = window.parent.document,
-						dataId = $(this).parents("tr").prop("id");
-					$.ajax({
-						type:"post",
-						url:"${pageContext.request.contextPath }/pages/order_List.jsp",
-						data:{"id":dataId},
-						success:function(data){
-							$("body",Wparent).find(".nav li p[data-id='order']").trigger("click");
-							$("body",Wparent).find("iframe").prop("src","${pageContext.request.contextPath }/pages/order_List.jsp");
-						}
-					});
-				});
+				//$(".see_order").click(function(){
+					//var Wparent = window.parent.document,
+					//orderUser = $(this);
+					//$.ajax({
+						//type:"post",
+						//url:"${pageContext.request.contextPath }/OrList",
+						//data:{"orderUser":orderUser},
+						//success:function(data){
+						//	$("body",Wparent).find(".nav li p[data-id='order']").trigger("click");
+						//	$("body",Wparent).find("iframe").prop("src","${pageContext.request.contextPath }/pages/order_List.jsp");
+						//}
+					//});
+				//});
 			});
 		</script>
 	</body>
