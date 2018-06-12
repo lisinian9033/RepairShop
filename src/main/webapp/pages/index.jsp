@@ -97,12 +97,12 @@
 		</li>
 		<!--消耗管理-->
 		<li>
-			<i class="menu_icon fa fa-history"></i>
-			<a href="javascript:void(0);" data-id="expenses" data-href="${pageContext.request.contextPath }/getExpensesRecordlist">出入库记录</a>
-		</li>
-		<li>
 			<i class="menu_icon fa fa-hourglass-half"></i>
 			<a href="javascript:void(0);" data-id="expenses" data-href="${pageContext.request.contextPath }/getExpensesList">消耗品管理</a>
+		</li>
+		<li>
+			<i class="menu_icon fa fa-history"></i>
+			<a href="javascript:void(0);" data-id="expenses" data-href="${pageContext.request.contextPath }/getExpensesRecordlist">出入库记录</a>
 		</li>
 		<!--员工管理-->
 		<li>
